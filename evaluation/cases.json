@@ -1,0 +1,29 @@
+{
+  "description": "人工编写的虚构政策开发集，不是独立测试集。事实要点为字符串检查，不等于完整语义正确性。",
+  "documents": {
+    "policy": "第一章 工作时间\n员工实行弹性工作制，应在上午九点至十点之间到岗，每天工作八小时。午休时间不计入工作时长。考勤由人事部门每月汇总，临时外出应向直属主管说明。\n\n第二章 年假\n正式员工每年享有十天带薪年假。连续休假三天及以上，必须提前五个工作日向直属主管申请。试用期员工暂不享有年假。请假申请应写明开始日期和结束日期。\n\n第三章 试用期\n新员工试用期为三个月。试用期结束前一周，由直属主管组织转正评估。评估依据岗位目标完成情况及日常表现，不得以未经核实的传闻作为评价依据。\n\n第四章 报销\n员工报销必须提供正规发票，并在费用发生后三十天内提交。单笔费用超过两千元时，还需要部门负责人额外审批。申请人需填写费用用途，财务部门按流程审核材料。\n\n第五章 远程办公\n正式员工每周最多可以远程办公两天，需要提前一天向直属主管申请。试用期员工不适用远程办公政策。远程办公期间应保持工作时间内通讯畅通。\n\n第六章 学习支持\n每位正式员工每年有三千元学习预算，可以购买专业书籍或参加与岗位相关的课程。使用前需要主管审批。学习结束后应向团队分享主要收获，未经审批的个人消费不属于本政策范围。\n\n第七章 设备归还\n员工离职时应归还公司配发的电脑和门禁卡，由行政部门核对资产清单。归还设备前应按照公司数据管理流程处理工作文件，不能自行删除需要交接的资料。\n\n第八章 访客管理\n访客需要在前台登记，并由接待员工陪同进入办公区域。访客不得进入未经授权的资料存放区。接待员工应提前向前台告知来访时间和人数。",
+    "conflict": "条款甲：所有正式员工本年度学习预算为三千元。该条款当前有效。\n\n条款乙：所有正式员工本年度学习预算为五千元。该条款当前有效。\n\n本文件没有给出两条款的优先级或生效先后。"
+  },
+  "cases": [
+    {"id":"direct_leave","category":"直接提问","document":"policy","question":"正式员工每年有几天年假？","answerable":true,"evidence":["正式员工每年享有十天带薪年假"],"facts":[["十天","10天","10 天"]]},
+    {"id":"missing_lunch","category":"无答案","document":"policy","question":"员工午餐是免费的吗？","answerable":false},
+    {"id":"paraphrase_probation","category":"同义改写","document":"policy","question":"刚入职通常多久可以转正？","answerable":true,"evidence":["新员工试用期为三个月"],"facts":[["三个月","3个月","3 个月"]]},
+    {"id":"followup_leave","category":"多轮追问","document":"policy","history":["正式员工每年有几天年假？"],"question":"那试用期员工呢？","standalone_query":"试用期员工享有年假吗？","answerable":true,"evidence":["试用期员工暂不享有年假"],"facts":[["不享有","没有","无年假","不享受"]]},
+    {"id":"direct_reimbursement","category":"直接提问","document":"policy","question":"报销需要什么凭证，多久内提交？","answerable":true,"evidence":["报销必须提供正规发票","费用发生后三十天内提交"],"facts":[["发票"],["三十天","30天","30 天"]]},
+    {"id":"conflict_budget","category":"冲突资料","document":"conflict","question":"正式员工本年度学习预算究竟是多少？","answerable":false},
+    {"id":"paraphrase_learning","category":"同义改写","document":"policy","question":"公司能给我多少进修资金？","answerable":true,"evidence":["每位正式员工每年有三千元学习预算"],"facts":[["三千元","3000元","3000 元","3,000"]]},
+    {"id":"multi_leave_remote","category":"多项条件","document":"policy","question":"试用期员工可以休年假、远程办公吗？","answerable":true,"evidence":["试用期员工暂不享有年假","试用期员工不适用远程办公政策"],"facts":[["年假"],["远程办公"],["不","无","没有"]]},
+    {"id":"direct_remote","category":"直接提问","document":"policy","question":"正式员工每周最多远程办公几天，提前多久申请？","answerable":true,"evidence":["每周最多可以远程办公两天","提前一天向直属主管申请"],"facts":[["两天","2天","2 天"],["一天","1天","1 天"]]},
+    {"id":"missing_transport","category":"无答案","document":"policy","question":"员工每月交通补贴是多少元？","answerable":false},
+    {"id":"paraphrase_expense","category":"同义改写","document":"policy","question":"我替公司垫的钱要怎么报回来？","answerable":true,"evidence":["报销必须提供正规发票"],"facts":[["发票"]]},
+    {"id":"followup_remote","category":"多轮追问","document":"policy","history":["正式员工可以远程办公吗？"],"question":"刚入职还没转正的也可以吗？","standalone_query":"试用期员工可以远程办公吗？","answerable":true,"evidence":["试用期员工不适用远程办公政策"],"facts":[["不适用","不可以","不能","不允许"]]},
+    {"id":"direct_approval","category":"直接提问","document":"policy","question":"单笔报销超过两千元需要谁额外审批？","answerable":true,"evidence":["需要部门负责人额外审批"],"facts":[["部门负责人"]]},
+    {"id":"missing_housing","category":"无答案","document":"policy","question":"公司给员工提供宿舍吗？","answerable":false},
+    {"id":"multi_learning_approval","category":"多项条件","document":"policy","question":"正式员工学习预算是多少，可以买书吗，需要提前审批吗？","answerable":true,"evidence":["三千元学习预算","可以购买专业书籍","使用前需要主管审批"],"facts":[["三千元","3000元","3000 元"],["书"],["审批"]]},
+    {"id":"direct_time","category":"直接提问","document":"policy","question":"每天工作几小时，午休算在内吗？","answerable":true,"evidence":["每天工作八小时","午休时间不计入工作时长"],"facts":[["八小时","8小时","8 小时"],["不计","不包括","不包含","不算"]]},
+    {"id":"paraphrase_visit","category":"同义改写","document":"policy","question":"朋友来公司找我，需要走什么手续？","answerable":true,"evidence":["访客需要在前台登记","由接待员工陪同"],"facts":[["登记"],["陪同"]]},
+    {"id":"conflict_purchase","category":"冲突资料","document":"conflict","question":"根据本文件，我能确定今年最多报销五千元学习费吗？","answerable":false},
+    {"id":"direct_exit","category":"直接提问","document":"policy","question":"离职时需要归还什么设备？","answerable":true,"evidence":["归还公司配发的电脑和门禁卡"],"facts":[["电脑"],["门禁卡"]]},
+    {"id":"missing_family","category":"无答案","document":"policy","question":"员工家属可以享受哪些医疗福利？","answerable":false}
+  ]
+}

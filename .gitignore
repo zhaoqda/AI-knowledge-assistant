@@ -10,5 +10,5 @@ __pycache__/
 .DS_Store
 *.log
 chroma/
-.streamlit/
+.streamlit/secrets.toml
 .model_cache/

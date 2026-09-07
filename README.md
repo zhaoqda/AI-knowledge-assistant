@@ -1,6 +1,8 @@
-# AI 知识库助手
+# 知页 · AI 知识库助手
 
 上传 PDF、Word 或 TXT，检索原文片段，再由腾讯 MaaS 模型生成带段落引用的回答。
+
+侧栏提供虚构员工手册示例，无需准备文件即可体验。页面展示已读取字数、问答轮次、实际耗时和引用原文；处理过程中显示理解问题、检索、生成和引用检查的实际步骤。单个文件限制 20 MB。
 
 ## 本地运行
 
@@ -24,7 +26,7 @@ python -m streamlit run app.py
 
 ## 连续问答与保存
 
-每个浏览器会话独立保存当前文档的解析结果、问题、回答、状态和来源。切换检索方式、清除索引或展开来源不会重新生成或丢失已有回答；同一文件不会每轮重复解析。文件名与文件内容共同计算标识，更换、修改或移除文档会清空对话与索引。上传损坏文件时也不会沿用旧文档。
+每个浏览器会话独立保存当前文档的解析结果、问题、回答、状态、耗时和来源。切换检索方式、清除索引或展开来源不会重新生成或丢失已有回答；同一文件不会每轮重复解析。文件名与文件内容共同计算标识。有历史问答时，更换、修改或移除文档需要点击“确认切换文档”，确认前保留原记录并暂停提问，允许先导出。确认后清空旧对话与索引，损坏的新文件不会继续沿用旧文档。清空对话也需要先勾选确认。
 
 追问会先调用模型补全为独立问题，再检索当前文档。页面显示改写后的问题，便于发现指代理解错误。普通首轮最多一次回答请求；有有效历史的后续问题通常增加一次改写请求，因此可能增加费用和等待时间。
 
@@ -37,6 +39,8 @@ python -m streamlit run app.py
 - `insufficient`：候选原文不足以回答；候选内容可查看，但不显示成已引用证据。
 - `unverified`：格式错误、来源编号无效或原文摘句核验失败；不展示未经核验的拟回答。
 - `error`：服务或追问解析失败；记录保留，界面操作不会自动重复请求。
+
+回答模型仍为腾讯 `hy3`。调用明确设置 `thinking.type=disabled`，保留 1,500 输出 token 上限，适合当前简短文档问答。返回正文为空或 `finish_reason=length` 时报告服务错误，不将其误判为文档无答案。追问只补全主题与指代；身份不明时允许说明带适用条件的政策，不假定用户符合条件。
 
 这些检查不是完整的事实核验：一条真实摘句仍可能被模型错误解释，也可能遗漏条件或错误拒答。尚未用独立数据集测量拒答准确率，不能保证消除幻觉。
 
@@ -61,10 +65,23 @@ python -m streamlit run app.py
 ## 验证
 
 ```bash
-python -m unittest test_documents test_retrieval test_vector_retrieval test_conversation -v
+python -m unittest discover -v
 ```
 
 自动测试不调用付费 API。向量单元测试使用预设向量检查索引、排序、缓存和隔离；它们不衡量真实模型的语义准确率。
+
+直接依赖版本固定在 `requirements.txt`，本轮在 Python 3.14.7 的本地环境验证；这不是包含全部间接依赖的锁文件，也未验证云端部署。
+
+## 20 题开发评测
+
+`evaluation/cases.json` 覆盖直接提问、同义改写、多轮追问、多项条件、资料缺失和资料冲突。默认只评估检索；显式添加 `--answers` 才调用已配置的在线回答服务并产生用量。
+
+```bash
+python evaluation/run.py --mode keyword --output evaluation/keyword-retrieval.json
+python evaluation/run.py --mode semantic --answers --output evaluation/semantic-answers.json
+```
+
+每次完整回答评测最多 24 次请求，包括两道追问的前置问答及改写。事实要点采用字符串检查，需要人工复核；这批题参与了调试，不能作为独立准确率或泛化能力证明。历史报告与结果解释见 `evaluation/README.md`。
 
 ## 小范围检索对照
 
@@ -85,6 +102,7 @@ python -m unittest test_documents test_retrieval test_vector_retrieval test_conv
 - [Chroma 余弦距离配置](https://docs.trychroma.com/docs/collections/configure)
 
 - [Streamlit 会话状态与刷新边界](https://docs.streamlit.io/develop/api-reference/caching-and-state/st.session_state)
+- [腾讯 TokenHub 思考模式参数](https://cloud.tencent.com/document/product/1823/135872)
 
 ## 多轮与拒答链路验证
 

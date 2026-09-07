@@ -174,6 +174,9 @@ class ChatInterfaceTests(unittest.TestCase):
             current[0] = BytesIO("新文件讲报销。".encode())
             current[0].name = "policy.txt"
             app.run()
+            self.assertEqual(len(app.chat_message), 4)
+            self.assertTrue(app.chat_input[0].disabled)
+            next(b for b in app.button if b.label == "确认切换文档").click().run()
             self.assertEqual(len(app.chat_message), 0)
             self.assertEqual(model.call_count, 3)
 
@@ -192,6 +195,7 @@ class ChatInterfaceTests(unittest.TestCase):
             app.run()
             self.assertEqual(model.call_count, 1)
             self.assertEqual(len(app.chat_message), 2)
+            app.checkbox[0].check().run()
             next(b for b in app.button if b.label == "清空对话").click().run()
             self.assertEqual(len(app.chat_message), 0)
 

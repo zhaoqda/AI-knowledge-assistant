@@ -1,0 +1,303 @@
+{
+  "timestamp": "2026-09-07T14:58:39.465300+00:00",
+  "mode": "semantic",
+  "live_answers": true,
+  "description": "人工编写的虚构政策开发集，不是独立测试集。事实要点为字符串检查，不等于完整语义正确性。",
+  "case_count": 20,
+  "retrieval": {
+    "all_evidence_hits": 14,
+    "answerable_cases": 14
+  },
+  "cases": [
+    {
+      "id": "direct_leave",
+      "category": "直接提问",
+      "question": "正式员工每年有几天年假？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.034,
+      "status": "answered",
+      "answer": "正式员工每年享有十天带薪年假。 [来源1]",
+      "resolved_question": "正式员工每年有几天年假？",
+      "criterion_pass": true,
+      "answer_seconds": 1.487
+    },
+    {
+      "id": "missing_lunch",
+      "category": "无答案",
+      "question": "员工午餐是免费的吗？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.017,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "员工午餐是免费的吗？",
+      "criterion_pass": true,
+      "answer_seconds": 1.257
+    },
+    {
+      "id": "paraphrase_probation",
+      "category": "同义改写",
+      "question": "刚入职通常多久可以转正？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.016,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "刚入职通常多久可以转正？",
+      "criterion_pass": false,
+      "answer_seconds": 1.148
+    },
+    {
+      "id": "followup_leave",
+      "category": "多轮追问",
+      "question": "那试用期员工呢？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.014,
+      "status": "answered",
+      "answer": "试用期员工暂不享有年假 [来源1]",
+      "resolved_question": "试用期员工每年有几天年假？",
+      "criterion_pass": true,
+      "answer_seconds": 4.031
+    },
+    {
+      "id": "direct_reimbursement",
+      "category": "直接提问",
+      "question": "报销需要什么凭证，多久内提交？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.015,
+      "status": "answered",
+      "answer": "员工报销必须提供正规发票作为凭证 [来源1]\n\n报销应在费用发生后三十天内提交 [来源1]",
+      "resolved_question": "报销需要什么凭证，多久内提交？",
+      "criterion_pass": true,
+      "answer_seconds": 1.778
+    },
+    {
+      "id": "conflict_budget",
+      "category": "冲突资料",
+      "question": "正式员工本年度学习预算究竟是多少？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.03,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "正式员工本年度学习预算究竟是多少？",
+      "criterion_pass": true,
+      "answer_seconds": 1.242
+    },
+    {
+      "id": "paraphrase_learning",
+      "category": "同义改写",
+      "question": "公司能给我多少进修资金？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.055,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "公司能给我多少进修资金？",
+      "criterion_pass": false,
+      "answer_seconds": 1.185
+    },
+    {
+      "id": "multi_leave_remote",
+      "category": "多项条件",
+      "question": "试用期员工可以休年假、远程办公吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.015,
+      "status": "answered",
+      "answer": "试用期员工暂不享有年假 [来源1]\n\n试用期员工不适用远程办公政策 [来源1]",
+      "resolved_question": "试用期员工可以休年假、远程办公吗？",
+      "criterion_pass": true,
+      "answer_seconds": 1.528
+    },
+    {
+      "id": "direct_remote",
+      "category": "直接提问",
+      "question": "正式员工每周最多远程办公几天，提前多久申请？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.016,
+      "status": "answered",
+      "answer": "正式员工每周最多远程办公两天 [来源1]\n\n需要提前一天向直属主管申请 [来源1]",
+      "resolved_question": "正式员工每周最多远程办公几天，提前多久申请？",
+      "criterion_pass": true,
+      "answer_seconds": 2.098
+    },
+    {
+      "id": "missing_transport",
+      "category": "无答案",
+      "question": "员工每月交通补贴是多少元？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.015,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "员工每月交通补贴是多少元？",
+      "criterion_pass": true,
+      "answer_seconds": 1.143
+    },
+    {
+      "id": "paraphrase_expense",
+      "category": "同义改写",
+      "question": "我替公司垫的钱要怎么报回来？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.016,
+      "status": "answered",
+      "answer": "员工报销必须提供正规发票，并在费用发生后三十天内提交。 [来源1]\n\n单笔费用超过两千元时，还需要部门负责人额外审批。 [来源1]\n\n申请人需填写费用用途，财务部门按流程审核材料。 [来源1]",
+      "resolved_question": "我替公司垫的钱要怎么报回来？",
+      "criterion_pass": true,
+      "answer_seconds": 2.332
+    },
+    {
+      "id": "followup_remote",
+      "category": "多轮追问",
+      "question": "刚入职还没转正的也可以吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.011,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "刚入职还没转正的员工也可以每周最多远程办公两天、需提前一天向直属主管申请、且远程办公期间保持工作时间内通讯畅通吗？",
+      "criterion_pass": false,
+      "answer_seconds": 4.547
+    },
+    {
+      "id": "direct_approval",
+      "category": "直接提问",
+      "question": "单笔报销超过两千元需要谁额外审批？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.013,
+      "status": "answered",
+      "answer": "单笔费用超过两千元时，还需要部门负责人额外审批。 [来源1]",
+      "resolved_question": "单笔报销超过两千元需要谁额外审批？",
+      "criterion_pass": true,
+      "answer_seconds": 1.587
+    },
+    {
+      "id": "missing_housing",
+      "category": "无答案",
+      "question": "公司给员工提供宿舍吗？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.015,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "公司给员工提供宿舍吗？",
+      "criterion_pass": true,
+      "answer_seconds": 1.113
+    },
+    {
+      "id": "multi_learning_approval",
+      "category": "多项条件",
+      "question": "正式员工学习预算是多少，可以买书吗，需要提前审批吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.016,
+      "status": "answered",
+      "answer": "正式员工每年有三千元学习预算 [来源1]\n\n可以购买专业书籍 [来源1]\n\n使用前需要主管审批 [来源1]",
+      "resolved_question": "正式员工学习预算是多少，可以买书吗，需要提前审批吗？",
+      "criterion_pass": true,
+      "answer_seconds": 2.391
+    },
+    {
+      "id": "direct_time",
+      "category": "直接提问",
+      "question": "每天工作几小时，午休算在内吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.018,
+      "status": "answered",
+      "answer": "员工每天工作八小时。 [来源1]\n\n午休时间不计入工作时长。 [来源1]",
+      "resolved_question": "每天工作几小时，午休算在内吗？",
+      "criterion_pass": true,
+      "answer_seconds": 1.882
+    },
+    {
+      "id": "paraphrase_visit",
+      "category": "同义改写",
+      "question": "朋友来公司找我，需要走什么手续？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.016,
+      "status": "answered",
+      "answer": "访客需要在前台登记，并由接待员工陪同进入办公区域。 [来源1]\n\n接待员工应提前向前台告知来访时间和人数。 [来源1]\n\n访客不得进入未经授权的资料存放区。 [来源1]",
+      "resolved_question": "朋友来公司找我，需要走什么手续？",
+      "criterion_pass": true,
+      "answer_seconds": 2.557
+    },
+    {
+      "id": "conflict_purchase",
+      "category": "冲突资料",
+      "question": "根据本文件，我能确定今年最多报销五千元学习费吗？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.032,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "根据本文件，我能确定今年最多报销五千元学习费吗？",
+      "criterion_pass": true,
+      "answer_seconds": 1.163
+    },
+    {
+      "id": "direct_exit",
+      "category": "直接提问",
+      "question": "离职时需要归还什么设备？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.035,
+      "status": "answered",
+      "answer": "员工离职时应归还公司配发的电脑和门禁卡 [来源1]",
+      "resolved_question": "离职时需要归还什么设备？",
+      "criterion_pass": true,
+      "answer_seconds": 1.624
+    },
+    {
+      "id": "missing_family",
+      "category": "无答案",
+      "question": "员工家属可以享受哪些医疗福利？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.015,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "员工家属可以享受哪些医疗福利？",
+      "criterion_pass": true,
+      "answer_seconds": 1.07
+    }
+  ],
+  "statuses": {
+    "answered": 11,
+    "insufficient": 9
+  },
+  "by_category": {
+    "直接提问": {
+      "passed": 6,
+      "total": 6
+    },
+    "无答案": {
+      "passed": 4,
+      "total": 4
+    },
+    "同义改写": {
+      "passed": 2,
+      "total": 4
+    },
+    "多轮追问": {
+      "passed": 1,
+      "total": 2
+    },
+    "冲突资料": {
+      "passed": 2,
+      "total": 2
+    },
+    "多项条件": {
+      "passed": 2,
+      "total": 2
+    }
+  }
+}

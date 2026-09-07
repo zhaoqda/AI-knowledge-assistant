@@ -1,0 +1,18 @@
+:root { color-scheme: light; }
+[data-testid="stAppViewContainer"] { background: #f6f8fc; }
+[data-testid="stSidebar"] { background: #ffffff; border-right: 1px solid #e6ebf3; }
+[data-testid="stMainBlockContainer"] { max-width: 1040px; padding-top: 2.5rem; padding-bottom: 3rem; }
+h1 { letter-spacing: -.035em; font-weight: 750; }
+h2, h3 { letter-spacing: -.02em; }
+.eyebrow { color: #52698f; font-size: .78rem; font-weight: 650; letter-spacing: .13em; margin-bottom: .6rem; }
+.intro { color: #64748b; font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem; }
+[data-testid="stChatMessage"] { background: white; border: 1px solid #e6ebf3; border-radius: 16px; padding: 1.2rem; margin-bottom: .8rem; }
+[data-testid="stMetric"] { background: #ffffff; border: 1px solid #e6ebf3; border-radius: 12px; padding: .8rem 1rem; }
+[data-testid="stMetricValue"] { font-size: 1.45rem; }
+[data-testid="stExpander"] { background: #ffffff; border-radius: 12px; }
+[data-testid="stChatInput"] { border-radius: 14px; }
+@media (max-width: 640px) {
+  [data-testid="stMainBlockContainer"] { padding: 1.2rem .85rem 2rem; }
+  [data-testid="stChatMessage"] { padding: .85rem; border-radius: 12px; }
+  h1 { font-size: 1.9rem; }
+}

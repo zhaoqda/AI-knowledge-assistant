@@ -1,0 +1,173 @@
+{
+  "timestamp": "2026-09-07T14:48:54.592611+00:00",
+  "mode": "keyword",
+  "live_answers": false,
+  "description": "人工编写的虚构政策开发集，不是独立测试集。事实要点为字符串检查，不等于完整语义正确性。",
+  "case_count": 20,
+  "retrieval": {
+    "all_evidence_hits": 13,
+    "answerable_cases": 14
+  },
+  "cases": [
+    {
+      "id": "direct_leave",
+      "category": "直接提问",
+      "question": "正式员工每年有几天年假？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.001
+    },
+    {
+      "id": "missing_lunch",
+      "category": "无答案",
+      "question": "员工午餐是免费的吗？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "paraphrase_probation",
+      "category": "同义改写",
+      "question": "刚入职通常多久可以转正？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "followup_leave",
+      "category": "多轮追问",
+      "question": "那试用期员工呢？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "direct_reimbursement",
+      "category": "直接提问",
+      "question": "报销需要什么凭证，多久内提交？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "conflict_budget",
+      "category": "冲突资料",
+      "question": "正式员工本年度学习预算究竟是多少？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "paraphrase_learning",
+      "category": "同义改写",
+      "question": "公司能给我多少进修资金？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "multi_leave_remote",
+      "category": "多项条件",
+      "question": "试用期员工可以休年假、远程办公吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "direct_remote",
+      "category": "直接提问",
+      "question": "正式员工每周最多远程办公几天，提前多久申请？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "missing_transport",
+      "category": "无答案",
+      "question": "员工每月交通补贴是多少元？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "paraphrase_expense",
+      "category": "同义改写",
+      "question": "我替公司垫的钱要怎么报回来？",
+      "answerable": true,
+      "retrieval_all_evidence": false,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "followup_remote",
+      "category": "多轮追问",
+      "question": "刚入职还没转正的也可以吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "direct_approval",
+      "category": "直接提问",
+      "question": "单笔报销超过两千元需要谁额外审批？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "missing_housing",
+      "category": "无答案",
+      "question": "公司给员工提供宿舍吗？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "multi_learning_approval",
+      "category": "多项条件",
+      "question": "正式员工学习预算是多少，可以买书吗，需要提前审批吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "direct_time",
+      "category": "直接提问",
+      "question": "每天工作几小时，午休算在内吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "paraphrase_visit",
+      "category": "同义改写",
+      "question": "朋友来公司找我，需要走什么手续？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "conflict_purchase",
+      "category": "冲突资料",
+      "question": "根据本文件，我能确定今年最多报销五千元学习费吗？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "direct_exit",
+      "category": "直接提问",
+      "question": "离职时需要归还什么设备？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "missing_family",
+      "category": "无答案",
+      "question": "员工家属可以享受哪些医疗福利？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0
+    }
+  ]
+}

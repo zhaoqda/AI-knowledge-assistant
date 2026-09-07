@@ -12,6 +12,7 @@ class Turn:
     question: str
     result: AnswerResult
     mode: str
+    elapsed_seconds: float | None = None
 
 
 @dataclass
@@ -21,8 +22,12 @@ class Conversation:
     error: str = ""
     turns: list[Turn] = field(default_factory=list)
 
+    @staticmethod
+    def key_for(data, filename=""):
+        return hashlib.sha256(filename.encode() + b"\0" + data).hexdigest() if data is not None else None
+
     def select_document(self, data, filename=""):
-        key = hashlib.sha256(filename.encode() + b"\0" + data).hexdigest() if data is not None else None
+        key = self.key_for(data, filename)
         if key == self.document_key:
             return False
         self.document_key = key
@@ -42,6 +47,8 @@ class Conversation:
             lines.extend([f"## 第 {number} 轮", "", f"问题：{turn.question}", "",
                           f"检索方式：{turn.mode}；状态：{turn.result.status}", "",
                           turn.result.answer, ""])
+            if turn.elapsed_seconds is not None:
+                lines.extend([f"本轮用时：{turn.elapsed_seconds:.1f} 秒", ""])
             if turn.result.retrieval_query != turn.question and turn.result.retrieval_query:
                 lines.extend([f"本轮理解的问题：{turn.result.retrieval_query}", ""])
             for i, source in enumerate(turn.result.sources, 1):
