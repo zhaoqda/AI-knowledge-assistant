@@ -1,10 +1,14 @@
-# .gitignore 
-.env 
-.env.local 
-__pycache__/ 
-*.pyc 
-.vscode/ 
-.DS_Store 
-*.log 
-chroma/ 
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+.DS_Store
+*.log
+chroma/
 .streamlit/
+.model_cache/
