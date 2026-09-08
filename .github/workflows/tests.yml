@@ -1,0 +1,38 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Check installed dependencies
+        run: python -m pip check
+
+      - name: Run unit tests
+        run: python -m unittest discover -v
+
+      - name: Check Python syntax
+        run: >-
+          python -m py_compile app.py conversation.py documents.py grounding.py
+          rag_core.py retrieval.py vector_retrieval.py evaluation/run.py
+          evaluate_retrieval.py test_conversation.py test_documents.py
+          test_release.py test_retrieval.py test_vector_retrieval.py
