@@ -95,11 +95,6 @@ python evaluation/run.py --mode semantic --answers --output evaluation/semantic-
 
 GitHub Actions 会在推送和 Pull Request 时安装依赖、运行全部测试并检查 Python 语法，不配置 API 密钥，也不调用在线回答服务。
 
-## 演示和求职材料
-
-[项目演示脚本、简历描述、评测解释和 10 个面试追问](portfolio/项目一作品集材料.md)
-
-推荐的现场演示顺序是：直接提问“正式员工每年有几天年假”，追问“那试用期员工呢”，最后询问文档没有写到的午餐政策。这样可以在几分钟内展示原文定位、多轮理解和资料不足处理。
 
 ## 当前边界
 
