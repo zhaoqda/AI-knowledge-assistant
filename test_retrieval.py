@@ -68,7 +68,7 @@ class PipelineTests(unittest.TestCase):
         keyword.assert_not_called()
 
     def test_service_failure_is_an_exception(self):
-        with patch.object(self.core, "API_KEY", "test"), patch.object(self.core, "BASE_URL", "https://example.invalid"), patch.object(self.core.requests, "post", side_effect=RuntimeError("unavailable")):
+        with patch.dict("os.environ", {"TENCENT_API_KEY": "test"}), patch.object(self.core, "API_KEY", "test"), patch.object(self.core, "BASE_URL", "https://example.invalid"), patch.object(self.core.requests, "post", side_effect=RuntimeError("unavailable")):
             with self.assertRaisesRegex(RuntimeError, "模型服务调用失败"):
                 self.core.call_llm("test")
 
