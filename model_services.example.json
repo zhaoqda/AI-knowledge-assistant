@@ -1,0 +1,28 @@
+[
+  {
+    "id": "tencent",
+    "name": "企业批准的腾讯 MaaS",
+    "provider": "腾讯 MaaS",
+    "base_url": "https://your-tencent-endpoint.example.com/v1",
+    "model": "hy3",
+    "key_env": "TENCENT_API_KEY",
+    "thinking_disabled": true
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek（需部署者批准）",
+    "provider": "DeepSeek 官方 API",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-flash",
+    "key_env": "DEEPSEEK_API_KEY",
+    "thinking_disabled": true
+  },
+  {
+    "id": "enterprise",
+    "name": "企业自建兼容服务",
+    "provider": "企业内部服务",
+    "base_url": "https://your-enterprise-endpoint.example.com/v1",
+    "model": "your-model-name",
+    "key_env": "ENTERPRISE_API_KEY"
+  }
+]

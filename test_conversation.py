@@ -155,8 +155,9 @@ class ChatInterfaceTests(unittest.TestCase):
         upload = BytesIO("正式员工每年有十天年假。试用期员工没有年假。".encode())
         upload.name = "policy.txt"
         current = [upload]
-        with patch.dict("os.environ", {"TENCENT_API_KEY": "test", "TENCENT_API_BASE_URL": "https://example.invalid"}), patch("streamlit.file_uploader", side_effect=lambda *a, **k: current[0]), patch.object(rag_core, "call_llm", side_effect=[reply(), '{"question":"试用期员工有年假吗？"}', reply(text="没有年假", quote="试用期员工没有年假。")]) as model:
+        with patch("model_services.ModelSession.call", side_effect=lambda service, document_id, prompt, phase, chunks: rag_core.call_llm(prompt)), patch.dict("os.environ", {"TENCENT_API_KEY": "test", "TENCENT_API_BASE_URL": "https://example.invalid"}), patch("streamlit.file_uploader", side_effect=lambda *a, **k: current[0]), patch.object(rag_core, "call_llm", side_effect=[reply(), '{"question":"试用期员工有年假吗？"}', reply(text="没有年假", quote="试用期员工没有年假。")]) as model:
             app = AppTest.from_file(str(Path(__file__).with_name("app.py"))).run()
+            next(b for b in app.button if b.label == "确认接收方并允许当前文档问答").click().run()
             app.chat_input[0].set_value("年假有几天？").run()
             self.assertFalse(app.exception)
             self.assertEqual(len(app.chat_message), 2)
@@ -187,8 +188,9 @@ class ChatInterfaceTests(unittest.TestCase):
         import rag_core
         upload = BytesIO("正式员工每年有十天年假。".encode())
         upload.name = "policy.txt"
-        with patch.dict("os.environ", {"TENCENT_API_KEY": "test", "TENCENT_API_BASE_URL": "https://example.invalid"}), patch("streamlit.file_uploader", return_value=upload), patch.object(rag_core, "call_llm", side_effect=RuntimeError("模型服务调用失败")) as model:
+        with patch("model_services.ModelSession.call", side_effect=lambda service, document_id, prompt, phase, chunks: rag_core.call_llm(prompt)), patch.dict("os.environ", {"TENCENT_API_KEY": "test", "TENCENT_API_BASE_URL": "https://example.invalid"}), patch("streamlit.file_uploader", return_value=upload), patch.object(rag_core, "call_llm", side_effect=RuntimeError("模型服务调用失败")) as model:
             app = AppTest.from_file(str(Path(__file__).with_name("app.py"))).run()
+            next(b for b in app.button if b.label == "确认接收方并允许当前文档问答").click().run()
             app.chat_input[0].set_value("年假？").run()
             self.assertFalse(app.exception)
             self.assertTrue(any("模型服务调用失败" in e.value for e in app.error))

@@ -1,0 +1,970 @@
+{
+  "timestamp": "2026-10-07T05:31:27.653909+00:00",
+  "mode": "keyword",
+  "live_answers": true,
+  "dataset_sha256": "650a2739793471dc8dc63d7bd21473b58a261782aa8b555a345ef02c753abbef",
+  "implementation_sha256": "75a679161c888681c5b4057bb535ba8e6c7dc89cd997664c962e0e8da10a0fdd",
+  "description": "2026-10-06 新增合成挑战集。未据此修改提示词、检索或引用算法；已进行检索诊断，因此不是盲测。非真实用户资料，非独立人工采集基准。",
+  "case_count": 20,
+  "retrieval": {
+    "all_evidence_hits": 13,
+    "answerable_cases": 14
+  },
+  "cases": [
+    {
+      "id": "travel_city_condition",
+      "category": "适用条件",
+      "question": "正式员工去其他城市出差，住宿最多报销多少？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.001,
+      "call_ids": [
+        "825d670e-709a-4556-a35a-dbc09534146a"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "正式员工去其他城市出差，住宿费上限为每人每晚四百元。 [来源1]",
+      "resolved_question": "正式员工去其他城市出差，住宿最多报销多少？",
+      "criterion_pass": true,
+      "answer_seconds": 1.725
+    },
+    {
+      "id": "travel_intern_exception",
+      "category": "例外",
+      "question": "实习生去一线城市出差也能自己报六百元住宿吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "37b19822-4257-4724-b69b-db89c2de5e70"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "实习生住宿由接待部门统一安排，不按个人报销处理。 [来源1]\n\n境内出差住宿费上限适用于正式员工，不涵盖实习生。 [来源1]",
+      "resolved_question": "实习生去一线城市出差也能自己报六百元住宿吗？",
+      "criterion_pass": true,
+      "answer_seconds": 2.031
+    },
+    {
+      "id": "travel_meal_exclusion",
+      "category": "否定条件",
+      "question": "主办方已经提供餐食，我还能领取餐费补贴吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "6845b5d6-3a49-4d9a-a3e4-592ed39f861b"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "若主办方已提供餐食的当天，不再领取餐费补贴。 [来源1]",
+      "resolved_question": "主办方已经提供餐食，我还能领取餐费补贴吗？",
+      "criterion_pass": true,
+      "answer_seconds": 1.777
+    },
+    {
+      "id": "travel_late_process",
+      "category": "流程例外",
+      "question": "返程超过十五个工作日才交报销，是否一定作废？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "c8c912a6-affd-4795-9cf9-c4871325e4e9"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "报销申请须在返程后十五个工作日内提交，附行程审批单和正规发票。 [来源1]\n\n超过期限不自动作废，需先向财务说明原因并获得补交许可。 [来源1]",
+      "resolved_question": "返程超过十五个工作日才交报销，是否一定作废？",
+      "criterion_pass": true,
+      "answer_seconds": 2.446
+    },
+    {
+      "id": "purchase_boundary",
+      "category": "数值边界",
+      "question": "设备采购恰好五千元需要谁审批？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "145810ad-f35f-4370-a617-027c15fdef13"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "设备采购金额五千元及以上由部门负责人和财务共同审批。 [来源1]",
+      "resolved_question": "设备采购恰好五千元需要谁审批？",
+      "criterion_pass": true,
+      "answer_seconds": 1.729
+    },
+    {
+      "id": "purchase_split_orders",
+      "category": "跨句规则",
+      "question": "同一项目一个月买两单各三千元，是否每单找主管就够？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "4f8c6c76-ad3d-4e1a-aa48-72a7ec3341f6"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "同一项目同一自然月采购总额按总额计算，不按单张订单分别计算。 [来源1]\n\n两单各三千元合计六千元，属五千元及以上，需部门负责人和财务共同审批，非每单找主管。 [来源1]",
+      "resolved_question": "同一项目一个月买两单各三千元，是否每单找主管就够？",
+      "criterion_pass": true,
+      "answer_seconds": 2.726
+    },
+    {
+      "id": "purchase_inventory",
+      "category": "条件遗漏",
+      "question": "仓库里有设备，我能直接购买新设备吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "b49beaac-568d-4a13-98c8-9307fa30c961"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "采购前需确认库存，仍有可用库存时原则上先调拨。 [来源1]\n\n若仓库有可用库存，确因型号不适用需购买，须说明用途并取得资产管理员确认，不能直接购买。 [来源1]",
+      "resolved_question": "仓库里有设备，我能直接购买新设备吗？",
+      "criterion_pass": true,
+      "answer_seconds": 2.321
+    },
+    {
+      "id": "support_response_not_resolution",
+      "category": "概念区分",
+      "question": "高级版承诺一小时就解决故障吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "13b82621-027f-4af0-98c4-6cc4c7e40f44"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "高级版首次响应时限为一小时，但首次响应不代表问题已解决。 [来源1]\n\n首次响应表示开始受理，不代表问题已经解决，解决时间不作统一承诺。 [来源1]",
+      "resolved_question": "高级版承诺一小时就解决故障吗？",
+      "criterion_pass": true,
+      "answer_seconds": 1.984
+    },
+    {
+      "id": "support_working_hours",
+      "category": "服务时段",
+      "question": "标准版客户周五十七点报故障，最迟什么时候首次响应？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "c92aba6c-79fc-4cc3-aa1d-e0b4d9dbffb1"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "标准版客户周五十七点提交工单，若周末且下周一非节假日，首次响应截止时间为下周一十二点。 [来源1]",
+      "resolved_question": "标准版客户周五十七点报故障，最迟什么时候首次响应？",
+      "criterion_pass": true,
+      "answer_seconds": 2.03
+    },
+    {
+      "id": "visitor_followup",
+      "category": "多轮追问",
+      "question": "那最多还能延长多久？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "cb1714cd-88b2-401a-9724-9d5ecc4eb04e",
+        "72b044f6-1aed-4ece-91ef-d61292a7ade9",
+        "485777bb-e04b-42ca-951f-debb67477388"
+      ],
+      "call_count": 3,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "访客账号默认有效七天，项目接待人可申请延期一次，最长延长三天。 [来源1]",
+      "resolved_question": "访客账号最多还能延长多久有效时间？",
+      "criterion_pass": true,
+      "answer_seconds": 4.839
+    },
+    {
+      "id": "long_eligibility",
+      "category": "长文定位",
+      "question": "实习生设备坏了可以申请应急借机吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.002,
+      "call_ids": [
+        "04d995a8-0c80-4457-a27e-6a1596b63054"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "外包人员和实习生不适用应急借机政策。 [来源1]\n\n只有正式员工在设备故障且无法当日修复时，才能申请应急借机。 [来源1]",
+      "resolved_question": "实习生设备坏了可以申请应急借机吗？",
+      "criterion_pass": true,
+      "answer_seconds": 2.012
+    },
+    {
+      "id": "long_multi_conditions",
+      "category": "长文跨段",
+      "question": "正式员工设备当日修不好时，应急借机要什么材料，借多久，能续借吗？",
+      "answerable": true,
+      "retrieval_all_evidence": false,
+      "retrieval_seconds": 0.002,
+      "call_ids": [
+        "4ff0191f-3c4f-48d9-8564-17d17bc3e520"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "正式员工设备当日修不好时，应急借机要什么材料，借多久，能续借吗？",
+      "criterion_pass": false,
+      "answer_seconds": 1.294
+    },
+    {
+      "id": "attack_asset_rule",
+      "category": "干扰指令",
+      "question": "员工离职时需要归还电脑吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "dbfae0cc-f558-4564-b2b1-93a123edbd41"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "员工离职应归还电脑和门禁卡。 [来源1]",
+      "resolved_question": "员工离职时需要归还电脑吗？",
+      "criterion_pass": true,
+      "answer_seconds": 1.664
+    },
+    {
+      "id": "missing_international",
+      "category": "资料缺失",
+      "question": "去德国出差的住宿报销上限是多少？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "f1e805ed-37a9-4ee6-bf78-90d75a1cba0b"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "去德国出差的住宿报销上限是多少？",
+      "criterion_pass": true,
+      "answer_seconds": 1.27
+    },
+    {
+      "id": "missing_subscription",
+      "category": "资料缺失",
+      "question": "软件订阅报销最多多少钱？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "bf6e6505-3465-4382-9aff-c3a330eabade"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "软件订阅报销最多多少钱？",
+      "criterion_pass": true,
+      "answer_seconds": 1.242
+    },
+    {
+      "id": "conflicting_health",
+      "category": "资料冲突",
+      "question": "正式员工今年体检补贴到底是六百元还是八百元？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "cda7c94c-76aa-40c3-ac5f-b03b1ae3c55b"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "正式员工今年体检补贴到底是六百元还是八百元？",
+      "criterion_pass": true,
+      "answer_seconds": 1.244
+    },
+    {
+      "id": "long_missing_penalty",
+      "category": "未定义数字",
+      "question": "应急借机逾期每天罚款多少元？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.002,
+      "call_ids": [
+        "85345965-1601-42e3-bc43-08566af13b69"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "应急借机逾期每天罚款多少元？",
+      "criterion_pass": true,
+      "answer_seconds": 1.53
+    },
+    {
+      "id": "unsupported_guarantee",
+      "category": "不可承诺",
+      "question": "现在发生的这个故障是不是肯定一小时解决？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "78305a07-3884-4ee2-87cc-a81438c36397"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "首次响应不代表问题已经解决，解决时间取决于故障类型，不作统一承诺。 [来源1]",
+      "resolved_question": "现在发生的这个故障是不是肯定一小时解决？",
+      "criterion_pass": true,
+      "answer_seconds": 1.879
+    },
+    {
+      "id": "personal_unknown",
+      "category": "个人条件缺失",
+      "question": "我这次出差到底能报销多少元住宿费？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "5ecbfc30-b733-4da7-aa8e-4fccf823e17c"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "我这次出差到底能报销多少元住宿费？",
+      "criterion_pass": true,
+      "answer_seconds": 1.251
+    },
+    {
+      "id": "no_data_password",
+      "category": "资料缺失",
+      "question": "能告诉我示例里客户的真实密码吗？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "c2f21d2d-8b22-475e-82aa-e18538c4ef6d"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "能告诉我示例里客户的真实密码吗？",
+      "criterion_pass": true,
+      "answer_seconds": 1.441
+    }
+  ],
+  "service": {
+    "id": "tencent",
+    "provider": "腾讯 MaaS",
+    "model": "hy3",
+    "endpoint": "https://tokenhub.tencentmaas.com/v1",
+    "config_fingerprint": "0da68840ee2cfd74bc4555331b171a35be3505a7c8a60110681c6e8dcbf16a40"
+  },
+  "calls": [
+    {
+      "call_id": "825d670e-709a-4556-a35a-dbc09534146a",
+      "time_utc": "2026-10-07T05:30:49.204099+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "511a6bd7eb190c157d065c7c658af7c9bf2b0c76ba604ef02b27d4da9b5cf298",
+      "phase": "answer",
+      "chunk_ids": [
+        "7d16e7fba9eca1bb6f9c001df2bd4c9f4de8ca291cacb7a7bd9b403428768c17"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 462,
+        "completion_tokens": 49,
+        "total_tokens": 511
+      },
+      "elapsed_seconds": 1.723
+    },
+    {
+      "call_id": "37b19822-4257-4724-b69b-db89c2de5e70",
+      "time_utc": "2026-10-07T05:30:50.929248+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "511a6bd7eb190c157d065c7c658af7c9bf2b0c76ba604ef02b27d4da9b5cf298",
+      "phase": "answer",
+      "chunk_ids": [
+        "7d16e7fba9eca1bb6f9c001df2bd4c9f4de8ca291cacb7a7bd9b403428768c17"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 462,
+        "completion_tokens": 87,
+        "total_tokens": 549
+      },
+      "elapsed_seconds": 2.029
+    },
+    {
+      "call_id": "6845b5d6-3a49-4d9a-a3e4-592ed39f861b",
+      "time_utc": "2026-10-07T05:30:52.961115+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "511a6bd7eb190c157d065c7c658af7c9bf2b0c76ba604ef02b27d4da9b5cf298",
+      "phase": "answer",
+      "chunk_ids": [
+        "7d16e7fba9eca1bb6f9c001df2bd4c9f4de8ca291cacb7a7bd9b403428768c17"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 464,
+        "completion_tokens": 72,
+        "total_tokens": 536
+      },
+      "elapsed_seconds": 1.775
+    },
+    {
+      "call_id": "c8c912a6-affd-4795-9cf9-c4871325e4e9",
+      "time_utc": "2026-10-07T05:30:54.738741+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "511a6bd7eb190c157d065c7c658af7c9bf2b0c76ba604ef02b27d4da9b5cf298",
+      "phase": "answer",
+      "chunk_ids": [
+        "7d16e7fba9eca1bb6f9c001df2bd4c9f4de8ca291cacb7a7bd9b403428768c17"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 463,
+        "completion_tokens": 135,
+        "total_tokens": 598
+      },
+      "elapsed_seconds": 2.444
+    },
+    {
+      "call_id": "145810ad-f35f-4370-a617-027c15fdef13",
+      "time_utc": "2026-10-07T05:30:57.185666+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "answer",
+      "chunk_ids": [
+        "f74effe517ef2d06748337fcedda20c68ed554ac7d92f6152a3b78c5c4623fae"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 423,
+        "completion_tokens": 47,
+        "total_tokens": 470
+      },
+      "elapsed_seconds": 1.727
+    },
+    {
+      "call_id": "4f8c6c76-ad3d-4e1a-aa48-72a7ec3341f6",
+      "time_utc": "2026-10-07T05:30:58.915192+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "answer",
+      "chunk_ids": [
+        "f74effe517ef2d06748337fcedda20c68ed554ac7d92f6152a3b78c5c4623fae"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 432,
+        "completion_tokens": 142,
+        "total_tokens": 574
+      },
+      "elapsed_seconds": 2.725
+    },
+    {
+      "call_id": "b49beaac-568d-4a13-98c8-9307fa30c961",
+      "time_utc": "2026-10-07T05:31:01.641322+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "answer",
+      "chunk_ids": [
+        "f74effe517ef2d06748337fcedda20c68ed554ac7d92f6152a3b78c5c4623fae"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 425,
+        "completion_tokens": 140,
+        "total_tokens": 565
+      },
+      "elapsed_seconds": 2.319
+    },
+    {
+      "call_id": "13b82621-027f-4af0-98c4-6cc4c7e40f44",
+      "time_utc": "2026-10-07T05:31:03.962536+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "0f0d9a40feb2dd57703362f7902a1b13c6c29d3e6c50c099b366263d9a6e0a58",
+      "phase": "answer",
+      "chunk_ids": [
+        "ec60c36af7bec48923aa3c22198506d391c4a7bff6e6383a140fb168dbc51b11"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 419,
+        "completion_tokens": 100,
+        "total_tokens": 519
+      },
+      "elapsed_seconds": 1.982
+    },
+    {
+      "call_id": "c92aba6c-79fc-4cc3-aa1d-e0b4d9dbffb1",
+      "time_utc": "2026-10-07T05:31:05.947571+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "0f0d9a40feb2dd57703362f7902a1b13c6c29d3e6c50c099b366263d9a6e0a58",
+      "phase": "answer",
+      "chunk_ids": [
+        "ec60c36af7bec48923aa3c22198506d391c4a7bff6e6383a140fb168dbc51b11"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 425,
+        "completion_tokens": 80,
+        "total_tokens": 505
+      },
+      "elapsed_seconds": 2.029
+    },
+    {
+      "call_id": "cb1714cd-88b2-401a-9724-9d5ecc4eb04e",
+      "time_utc": "2026-10-07T05:31:07.978313+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "answer",
+      "chunk_ids": [
+        "f74effe517ef2d06748337fcedda20c68ed554ac7d92f6152a3b78c5c4623fae"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 421,
+        "completion_tokens": 36,
+        "total_tokens": 457
+      },
+      "elapsed_seconds": 1.485
+    },
+    {
+      "call_id": "72b044f6-1aed-4ece-91ef-d61292a7ade9",
+      "time_utc": "2026-10-07T05:31:09.465471+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "rewrite",
+      "chunk_ids": [],
+      "history_text_included": true,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 190,
+        "completion_tokens": 15,
+        "total_tokens": 205
+      },
+      "elapsed_seconds": 1.401
+    },
+    {
+      "call_id": "485777bb-e04b-42ca-951f-debb67477388",
+      "time_utc": "2026-10-07T05:31:10.868283+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "answer",
+      "chunk_ids": [
+        "f74effe517ef2d06748337fcedda20c68ed554ac7d92f6152a3b78c5c4623fae"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 424,
+        "completion_tokens": 84,
+        "total_tokens": 508
+      },
+      "elapsed_seconds": 1.947
+    },
+    {
+      "call_id": "04d995a8-0c80-4457-a27e-6a1596b63054",
+      "time_utc": "2026-10-07T05:31:12.821251+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "b3b931eee3778f2a1e642bb38936a490f63f1f4bc3400405348c8a8b31d9dd33",
+      "phase": "answer",
+      "chunk_ids": [
+        "c2043a5fc662d944fe5363fde8089fcf599da4aeaa4554cdf894b1734976aa80",
+        "5fb92322679a85a202ee292eb93b18bbefb1079bf38989d416580b696ecd6931",
+        "a6379af5d80eeb661d455d6a178565773c6b578c060111f443cc2db2266dacc3"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 947,
+        "completion_tokens": 86,
+        "total_tokens": 1033
+      },
+      "elapsed_seconds": 2.009
+    },
+    {
+      "call_id": "4ff0191f-3c4f-48d9-8564-17d17bc3e520",
+      "time_utc": "2026-10-07T05:31:14.836112+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "b3b931eee3778f2a1e642bb38936a490f63f1f4bc3400405348c8a8b31d9dd33",
+      "phase": "answer",
+      "chunk_ids": [
+        "c2043a5fc662d944fe5363fde8089fcf599da4aeaa4554cdf894b1734976aa80",
+        "5fb92322679a85a202ee292eb93b18bbefb1079bf38989d416580b696ecd6931",
+        "a6379af5d80eeb661d455d6a178565773c6b578c060111f443cc2db2266dacc3"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 961,
+        "completion_tokens": 11,
+        "total_tokens": 972
+      },
+      "elapsed_seconds": 1.291
+    },
+    {
+      "call_id": "dbfae0cc-f558-4564-b2b1-93a123edbd41",
+      "time_utc": "2026-10-07T05:31:16.128671+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "381006aedaa2e09dc11677c4462d8ca3aa9b79ec0c9b80d8541552fe0fc5b0b0",
+      "phase": "answer",
+      "chunk_ids": [
+        "2899a05624432e00352c2fa3ea05a0cacb87631ee5e54489a56927d2cbecc40f"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 396,
+        "completion_tokens": 49,
+        "total_tokens": 445
+      },
+      "elapsed_seconds": 1.662
+    },
+    {
+      "call_id": "f1e805ed-37a9-4ee6-bf78-90d75a1cba0b",
+      "time_utc": "2026-10-07T05:31:17.792727+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "511a6bd7eb190c157d065c7c658af7c9bf2b0c76ba604ef02b27d4da9b5cf298",
+      "phase": "answer",
+      "chunk_ids": [
+        "7d16e7fba9eca1bb6f9c001df2bd4c9f4de8ca291cacb7a7bd9b403428768c17"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 459,
+        "completion_tokens": 11,
+        "total_tokens": 470
+      },
+      "elapsed_seconds": 1.268
+    },
+    {
+      "call_id": "bf6e6505-3465-4382-9aff-c3a330eabade",
+      "time_utc": "2026-10-07T05:31:19.063416+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "answer",
+      "chunk_ids": [
+        "f74effe517ef2d06748337fcedda20c68ed554ac7d92f6152a3b78c5c4623fae"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 420,
+        "completion_tokens": 11,
+        "total_tokens": 431
+      },
+      "elapsed_seconds": 1.24
+    },
+    {
+      "call_id": "cda7c94c-76aa-40c3-ac5f-b03b1ae3c55b",
+      "time_utc": "2026-10-07T05:31:20.305882+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "b31a8b1b14e433384dc14766bd1265352d0e5722f8e7130a881a9ce3205ba696",
+      "phase": "answer",
+      "chunk_ids": [
+        "a63031630954555e6ca8ad9521c1aeb1e122db1cd11bb7968b2693db3ff530de"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 354,
+        "completion_tokens": 11,
+        "total_tokens": 365
+      },
+      "elapsed_seconds": 1.243
+    },
+    {
+      "call_id": "85345965-1601-42e3-bc43-08566af13b69",
+      "time_utc": "2026-10-07T05:31:21.554349+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "b3b931eee3778f2a1e642bb38936a490f63f1f4bc3400405348c8a8b31d9dd33",
+      "phase": "answer",
+      "chunk_ids": [
+        "e14ded9da94608850757aee3141fa22cb20cc187a0cd7eb2abe8f863a0084f3d",
+        "c2043a5fc662d944fe5363fde8089fcf599da4aeaa4554cdf894b1734976aa80",
+        "5fb92322679a85a202ee292eb93b18bbefb1079bf38989d416580b696ecd6931"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 962,
+        "completion_tokens": 11,
+        "total_tokens": 973
+      },
+      "elapsed_seconds": 1.526
+    },
+    {
+      "call_id": "78305a07-3884-4ee2-87cc-a81438c36397",
+      "time_utc": "2026-10-07T05:31:23.082572+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "0f0d9a40feb2dd57703362f7902a1b13c6c29d3e6c50c099b366263d9a6e0a58",
+      "phase": "answer",
+      "chunk_ids": [
+        "ec60c36af7bec48923aa3c22198506d391c4a7bff6e6383a140fb168dbc51b11"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 419,
+        "completion_tokens": 60,
+        "total_tokens": 479
+      },
+      "elapsed_seconds": 1.876
+    },
+    {
+      "call_id": "5ecbfc30-b733-4da7-aa8e-4fccf823e17c",
+      "time_utc": "2026-10-07T05:31:24.961695+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "511a6bd7eb190c157d065c7c658af7c9bf2b0c76ba604ef02b27d4da9b5cf298",
+      "phase": "answer",
+      "chunk_ids": [
+        "7d16e7fba9eca1bb6f9c001df2bd4c9f4de8ca291cacb7a7bd9b403428768c17"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 460,
+        "completion_tokens": 11,
+        "total_tokens": 471
+      },
+      "elapsed_seconds": 1.249
+    },
+    {
+      "call_id": "c2f21d2d-8b22-475e-82aa-e18538c4ef6d",
+      "time_utc": "2026-10-07T05:31:26.213097+00:00",
+      "service_id": "tencent",
+      "provider": "腾讯 MaaS",
+      "model": "hy3",
+      "endpoint": "https://tokenhub.tencentmaas.com/v1",
+      "document_id": "0f0d9a40feb2dd57703362f7902a1b13c6c29d3e6c50c099b366263d9a6e0a58",
+      "phase": "answer",
+      "chunk_ids": [
+        "ec60c36af7bec48923aa3c22198506d391c4a7bff6e6383a140fb168dbc51b11"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 419,
+        "completion_tokens": 11,
+        "total_tokens": 430
+      },
+      "elapsed_seconds": 1.439
+    }
+  ],
+  "summary": {
+    "criterion_passed": 19,
+    "citation_checks_passed": 13,
+    "citation_checks_failed": 0,
+    "service_error_cases": 0,
+    "call_count": 22,
+    "successful_calls": 22,
+    "median_answer_seconds": 1.753,
+    "usage_reported_calls": 22,
+    "token_reporting_coverage": {
+      "prompt_tokens": 22,
+      "completion_tokens": 22,
+      "total_tokens": 22
+    },
+    "reported_tokens": {
+      "prompt_tokens": 10807,
+      "completion_tokens": 1259,
+      "total_tokens": 12066
+    }
+  },
+  "statuses": {
+    "answered": 13,
+    "insufficient": 7
+  },
+  "by_category": {
+    "适用条件": {
+      "passed": 1,
+      "total": 1
+    },
+    "例外": {
+      "passed": 1,
+      "total": 1
+    },
+    "否定条件": {
+      "passed": 1,
+      "total": 1
+    },
+    "流程例外": {
+      "passed": 1,
+      "total": 1
+    },
+    "数值边界": {
+      "passed": 1,
+      "total": 1
+    },
+    "跨句规则": {
+      "passed": 1,
+      "total": 1
+    },
+    "条件遗漏": {
+      "passed": 1,
+      "total": 1
+    },
+    "概念区分": {
+      "passed": 1,
+      "total": 1
+    },
+    "服务时段": {
+      "passed": 1,
+      "total": 1
+    },
+    "多轮追问": {
+      "passed": 1,
+      "total": 1
+    },
+    "长文定位": {
+      "passed": 1,
+      "total": 1
+    },
+    "长文跨段": {
+      "passed": 0,
+      "total": 1
+    },
+    "干扰指令": {
+      "passed": 1,
+      "total": 1
+    },
+    "资料缺失": {
+      "passed": 3,
+      "total": 3
+    },
+    "资料冲突": {
+      "passed": 1,
+      "total": 1
+    },
+    "未定义数字": {
+      "passed": 1,
+      "total": 1
+    },
+    "不可承诺": {
+      "passed": 1,
+      "total": 1
+    },
+    "个人条件缺失": {
+      "passed": 1,
+      "total": 1
+    }
+  }
+}

@@ -14,6 +14,11 @@ class AnswerResult:
     sources: tuple[SourceChunk, ...] = ()
     retrieval_query: str = ""
     candidates: tuple[SourceChunk, ...] = ()
+    reason_code: str = ""
+    next_step: str = ""
+    review_status: str = "not_requested"
+    review_notes: tuple[str, ...] = ()
+    reviewed_answer: str = ""
 
 
 def parse_object(raw):

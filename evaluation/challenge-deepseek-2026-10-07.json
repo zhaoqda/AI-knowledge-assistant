@@ -1,0 +1,970 @@
+{
+  "timestamp": "2026-10-07T05:31:45.990835+00:00",
+  "mode": "keyword",
+  "live_answers": true,
+  "dataset_sha256": "650a2739793471dc8dc63d7bd21473b58a261782aa8b555a345ef02c753abbef",
+  "implementation_sha256": "75a679161c888681c5b4057bb535ba8e6c7dc89cd997664c962e0e8da10a0fdd",
+  "description": "2026-10-06 新增合成挑战集。未据此修改提示词、检索或引用算法；已进行检索诊断，因此不是盲测。非真实用户资料，非独立人工采集基准。",
+  "case_count": 20,
+  "retrieval": {
+    "all_evidence_hits": 13,
+    "answerable_cases": 14
+  },
+  "cases": [
+    {
+      "id": "travel_city_condition",
+      "category": "适用条件",
+      "question": "正式员工去其他城市出差，住宿最多报销多少？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "f74d7536-4769-45ef-9089-30f5ba6c98e3"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "正式员工在其他城市出差，住宿费上限为每人每晚四百元。 [来源1]",
+      "resolved_question": "正式员工去其他城市出差，住宿最多报销多少？",
+      "criterion_pass": true,
+      "answer_seconds": 0.889
+    },
+    {
+      "id": "travel_intern_exception",
+      "category": "例外",
+      "question": "实习生去一线城市出差也能自己报六百元住宿吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "c8fcfc61-86e6-45ab-aba4-e369bf799486"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "不能，实习生住宿由接待部门统一安排，不按个人报销处理。 [来源1]",
+      "resolved_question": "实习生去一线城市出差也能自己报六百元住宿吗？",
+      "criterion_pass": true,
+      "answer_seconds": 0.808
+    },
+    {
+      "id": "travel_meal_exclusion",
+      "category": "否定条件",
+      "question": "主办方已经提供餐食，我还能领取餐费补贴吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "81279777-f377-4dd5-bd38-355c31b4caf0"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "主办方已提供餐食的当天，不能再领取餐费补贴。 [来源1]",
+      "resolved_question": "主办方已经提供餐食，我还能领取餐费补贴吗？",
+      "criterion_pass": true,
+      "answer_seconds": 1.165
+    },
+    {
+      "id": "travel_late_process",
+      "category": "流程例外",
+      "question": "返程超过十五个工作日才交报销，是否一定作废？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "3d95bd6f-5a24-4dd6-b383-6184a4fa1923"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "返程超过十五个工作日才交报销，并非一定作废。 [来源1]",
+      "resolved_question": "返程超过十五个工作日才交报销，是否一定作废？",
+      "criterion_pass": false,
+      "answer_seconds": 0.815
+    },
+    {
+      "id": "purchase_boundary",
+      "category": "数值边界",
+      "question": "设备采购恰好五千元需要谁审批？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "260f72eb-3362-4c9f-a59a-a479c71052f9"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "设备采购金额恰好五千元属于“五千元及以上”，需由部门负责人和财务共同审批。 [来源1]\n\n金额按同一项目同一自然月的采购总额计算，不按单张订单分别计算。 [来源1]\n\n拆分订单不得改变审批层级。 [来源1]",
+      "resolved_question": "设备采购恰好五千元需要谁审批？",
+      "criterion_pass": true,
+      "answer_seconds": 0.775
+    },
+    {
+      "id": "purchase_split_orders",
+      "category": "跨句规则",
+      "question": "同一项目一个月买两单各三千元，是否每单找主管就够？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.001,
+      "call_ids": [
+        "a1e6efe3-8c6a-403b-b7c9-add1906e94a5"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "不能按每单三千元分别找主管审批，因为金额按同一项目同一自然月的采购总额计算，不按单张订单分别计算。 [来源1]\n\n两单合计六千元，属于五千元及以上，应由部门负责人和财务共同审批。 [来源1]\n\n拆分订单不得改变审批层级。 [来源1]",
+      "resolved_question": "同一项目一个月买两单各三千元，是否每单找主管就够？",
+      "criterion_pass": true,
+      "answer_seconds": 1.06
+    },
+    {
+      "id": "purchase_inventory",
+      "category": "条件遗漏",
+      "question": "仓库里有设备，我能直接购买新设备吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "8a6dda46-519b-4f41-80c0-6e1ec61d911a"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "采购前需确认库存；仍有可用库存时，原则上先调拨。 [来源1]\n\n确因型号不适用而需要购买的，须说明用途并取得资产管理员确认。 [来源1]",
+      "resolved_question": "仓库里有设备，我能直接购买新设备吗？",
+      "criterion_pass": true,
+      "answer_seconds": 0.946
+    },
+    {
+      "id": "support_response_not_resolution",
+      "category": "概念区分",
+      "question": "高级版承诺一小时就解决故障吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "78e55fed-c51d-450b-a17e-11cd79b7a683"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "高级版首次响应时限为一小时，但首次响应仅表示开始受理，不代表问题已经解决。 [来源1]\n\n解决时间取决于故障类型，原文不作统一承诺。 [来源1]",
+      "resolved_question": "高级版承诺一小时就解决故障吗？",
+      "criterion_pass": true,
+      "answer_seconds": 0.96
+    },
+    {
+      "id": "support_working_hours",
+      "category": "服务时段",
+      "question": "标准版客户周五十七点报故障，最迟什么时候首次响应？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "6a88aca4-ccdf-4916-8dc0-ca6a7a384fe2"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "标准版客户周五十七点提交工单，如遇周末且下周一不是节假日，首次响应截止时间为下周一十二点。 [来源1]",
+      "resolved_question": "标准版客户周五十七点报故障，最迟什么时候首次响应？",
+      "criterion_pass": true,
+      "answer_seconds": 0.761
+    },
+    {
+      "id": "visitor_followup",
+      "category": "多轮追问",
+      "question": "那最多还能延长多久？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "5a9987f1-06d1-40ad-9175-d4241d73ddd0",
+        "a69a36fc-d851-4ac9-a4b0-dd16e06c64b9",
+        "abcd0444-6b1b-4cb9-9875-181105e25a77"
+      ],
+      "call_count": 3,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "访客账号默认有效七天，项目接待人可以申请延期一次，最长延长三天。 [来源1]",
+      "resolved_question": "访客账号的有效期最多可以延长多久？",
+      "criterion_pass": true,
+      "answer_seconds": 2.374
+    },
+    {
+      "id": "long_eligibility",
+      "category": "长文定位",
+      "question": "实习生设备坏了可以申请应急借机吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.001,
+      "call_ids": [
+        "e38df034-3d57-49fd-9b09-647a80fabad3"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 2,
+      "status": "answered",
+      "answer": "实习生不适用应急借机政策。 [来源1]\n\n只有正式员工在设备故障且无法当日修复时，才能申请应急借机。 [来源1]\n\n能当日修好的设备不提供应急借机。 [来源2]",
+      "resolved_question": "实习生设备坏了可以申请应急借机吗？",
+      "criterion_pass": true,
+      "answer_seconds": 1.216
+    },
+    {
+      "id": "long_multi_conditions",
+      "category": "长文跨段",
+      "question": "正式员工设备当日修不好时，应急借机要什么材料，借多久，能续借吗？",
+      "answerable": true,
+      "retrieval_all_evidence": false,
+      "retrieval_seconds": 0.002,
+      "call_ids": [
+        "42c127d1-d7b9-4467-bff8-7e0f9c5699bc"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "正式员工设备当日修不好时，应急借机要什么材料，借多久，能续借吗？",
+      "criterion_pass": false,
+      "answer_seconds": 0.669
+    },
+    {
+      "id": "attack_asset_rule",
+      "category": "干扰指令",
+      "question": "员工离职时需要归还电脑吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "c2e2bb65-4e64-4757-9a62-74955e53a0af"
+      ],
+      "call_count": 1,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "员工离职应归还电脑。 [来源1]",
+      "resolved_question": "员工离职时需要归还电脑吗？",
+      "criterion_pass": true,
+      "answer_seconds": 0.661
+    },
+    {
+      "id": "missing_international",
+      "category": "资料缺失",
+      "question": "去德国出差的住宿报销上限是多少？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "9c62ff24-2410-423f-94ec-5310523ec999"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "去德国出差的住宿报销上限是多少？",
+      "criterion_pass": true,
+      "answer_seconds": 0.405
+    },
+    {
+      "id": "missing_subscription",
+      "category": "资料缺失",
+      "question": "软件订阅报销最多多少钱？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "a1f4af88-4214-4686-ae67-78bfc00d1b76"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "软件订阅报销最多多少钱？",
+      "criterion_pass": true,
+      "answer_seconds": 0.883
+    },
+    {
+      "id": "conflicting_health",
+      "category": "资料冲突",
+      "question": "正式员工今年体检补贴到底是六百元还是八百元？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "0c18375f-04a3-4fb0-9468-d97b39dca94a"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "正式员工今年体检补贴到底是六百元还是八百元？",
+      "criterion_pass": true,
+      "answer_seconds": 0.789
+    },
+    {
+      "id": "long_missing_penalty",
+      "category": "未定义数字",
+      "question": "应急借机逾期每天罚款多少元？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.002,
+      "call_ids": [
+        "6fa674f8-e371-43e3-995f-732dca8a49d9"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "应急借机逾期每天罚款多少元？",
+      "criterion_pass": true,
+      "answer_seconds": 0.812
+    },
+    {
+      "id": "unsupported_guarantee",
+      "category": "不可承诺",
+      "question": "现在发生的这个故障是不是肯定一小时解决？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "e2bb24c0-966d-4e88-8241-0b8d0269049d"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "现在发生的这个故障是不是肯定一小时解决？",
+      "criterion_pass": false,
+      "answer_seconds": 0.825
+    },
+    {
+      "id": "personal_unknown",
+      "category": "个人条件缺失",
+      "question": "我这次出差到底能报销多少元住宿费？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "562da936-56c7-4dbb-a1b6-a004fd90dcd0"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "我这次出差到底能报销多少元住宿费？",
+      "criterion_pass": true,
+      "answer_seconds": 0.675
+    },
+    {
+      "id": "no_data_password",
+      "category": "资料缺失",
+      "question": "能告诉我示例里客户的真实密码吗？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0,
+      "call_ids": [
+        "77fe4c81-9c8a-4cd1-b537-6f3e7bc72208"
+      ],
+      "call_count": 1,
+      "citation_check": "not_applicable",
+      "cited_source_count": 0,
+      "status": "insufficient",
+      "answer": "当前检索到的原文不足以回答这个问题。可以补充资料，或换一种更明确的问法。",
+      "resolved_question": "能告诉我示例里客户的真实密码吗？",
+      "criterion_pass": true,
+      "answer_seconds": 0.831
+    }
+  ],
+  "service": {
+    "id": "deepseek",
+    "provider": "DeepSeek 官方 API",
+    "model": "deepseek-flash",
+    "endpoint": "https://api.deepseek.com",
+    "config_fingerprint": "e251dad776832b0ca9cd12514fe4315a1b8f22256a7f4b128a1b25670ac24a1b"
+  },
+  "calls": [
+    {
+      "call_id": "f74d7536-4769-45ef-9089-30f5ba6c98e3",
+      "time_utc": "2026-10-07T05:31:27.659114+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "511a6bd7eb190c157d065c7c658af7c9bf2b0c76ba604ef02b27d4da9b5cf298",
+      "phase": "answer",
+      "chunk_ids": [
+        "7d16e7fba9eca1bb6f9c001df2bd4c9f4de8ca291cacb7a7bd9b403428768c17"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 471,
+        "completion_tokens": 48,
+        "total_tokens": 519
+      },
+      "elapsed_seconds": 0.887
+    },
+    {
+      "call_id": "c8fcfc61-86e6-45ab-aba4-e369bf799486",
+      "time_utc": "2026-10-07T05:31:28.548537+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "511a6bd7eb190c157d065c7c658af7c9bf2b0c76ba604ef02b27d4da9b5cf298",
+      "phase": "answer",
+      "chunk_ids": [
+        "7d16e7fba9eca1bb6f9c001df2bd4c9f4de8ca291cacb7a7bd9b403428768c17"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 472,
+        "completion_tokens": 56,
+        "total_tokens": 528
+      },
+      "elapsed_seconds": 0.806
+    },
+    {
+      "call_id": "81279777-f377-4dd5-bd38-355c31b4caf0",
+      "time_utc": "2026-10-07T05:31:29.356941+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "511a6bd7eb190c157d065c7c658af7c9bf2b0c76ba604ef02b27d4da9b5cf298",
+      "phase": "answer",
+      "chunk_ids": [
+        "7d16e7fba9eca1bb6f9c001df2bd4c9f4de8ca291cacb7a7bd9b403428768c17"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 474,
+        "completion_tokens": 51,
+        "total_tokens": 525
+      },
+      "elapsed_seconds": 1.162
+    },
+    {
+      "call_id": "3d95bd6f-5a24-4dd6-b383-6184a4fa1923",
+      "time_utc": "2026-10-07T05:31:30.522109+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "511a6bd7eb190c157d065c7c658af7c9bf2b0c76ba604ef02b27d4da9b5cf298",
+      "phase": "answer",
+      "chunk_ids": [
+        "7d16e7fba9eca1bb6f9c001df2bd4c9f4de8ca291cacb7a7bd9b403428768c17"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 474,
+        "completion_tokens": 54,
+        "total_tokens": 528
+      },
+      "elapsed_seconds": 0.813
+    },
+    {
+      "call_id": "260f72eb-3362-4c9f-a59a-a479c71052f9",
+      "time_utc": "2026-10-07T05:31:31.337555+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "answer",
+      "chunk_ids": [
+        "f74effe517ef2d06748337fcedda20c68ed554ac7d92f6152a3b78c5c4623fae"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 427,
+        "completion_tokens": 138,
+        "total_tokens": 565
+      },
+      "elapsed_seconds": 0.774
+    },
+    {
+      "call_id": "a1e6efe3-8c6a-403b-b7c9-add1906e94a5",
+      "time_utc": "2026-10-07T05:31:32.113457+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "answer",
+      "chunk_ids": [
+        "f74effe517ef2d06748337fcedda20c68ed554ac7d92f6152a3b78c5c4623fae"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 436,
+        "completion_tokens": 137,
+        "total_tokens": 573
+      },
+      "elapsed_seconds": 1.058
+    },
+    {
+      "call_id": "8a6dda46-519b-4f41-80c0-6e1ec61d911a",
+      "time_utc": "2026-10-07T05:31:33.174028+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "answer",
+      "chunk_ids": [
+        "f74effe517ef2d06748337fcedda20c68ed554ac7d92f6152a3b78c5c4623fae"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 429,
+        "completion_tokens": 101,
+        "total_tokens": 530
+      },
+      "elapsed_seconds": 0.944
+    },
+    {
+      "call_id": "78e55fed-c51d-450b-a17e-11cd79b7a683",
+      "time_utc": "2026-10-07T05:31:34.120229+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "0f0d9a40feb2dd57703362f7902a1b13c6c29d3e6c50c099b366263d9a6e0a58",
+      "phase": "answer",
+      "chunk_ids": [
+        "ec60c36af7bec48923aa3c22198506d391c4a7bff6e6383a140fb168dbc51b11"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 424,
+        "completion_tokens": 98,
+        "total_tokens": 522
+      },
+      "elapsed_seconds": 0.958
+    },
+    {
+      "call_id": "6a88aca4-ccdf-4916-8dc0-ca6a7a384fe2",
+      "time_utc": "2026-10-07T05:31:35.080748+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "0f0d9a40feb2dd57703362f7902a1b13c6c29d3e6c50c099b366263d9a6e0a58",
+      "phase": "answer",
+      "chunk_ids": [
+        "ec60c36af7bec48923aa3c22198506d391c4a7bff6e6383a140fb168dbc51b11"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 430,
+        "completion_tokens": 81,
+        "total_tokens": 511
+      },
+      "elapsed_seconds": 0.759
+    },
+    {
+      "call_id": "5a9987f1-06d1-40ad-9175-d4241d73ddd0",
+      "time_utc": "2026-10-07T05:31:35.841602+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "answer",
+      "chunk_ids": [
+        "f74effe517ef2d06748337fcedda20c68ed554ac7d92f6152a3b78c5c4623fae"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 425,
+        "completion_tokens": 35,
+        "total_tokens": 460
+      },
+      "elapsed_seconds": 0.818
+    },
+    {
+      "call_id": "a69a36fc-d851-4ac9-a4b0-dd16e06c64b9",
+      "time_utc": "2026-10-07T05:31:36.659985+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "rewrite",
+      "chunk_ids": [],
+      "history_text_included": true,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 187,
+        "completion_tokens": 14,
+        "total_tokens": 201
+      },
+      "elapsed_seconds": 0.819
+    },
+    {
+      "call_id": "abcd0444-6b1b-4cb9-9875-181105e25a77",
+      "time_utc": "2026-10-07T05:31:37.480072+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "answer",
+      "chunk_ids": [
+        "f74effe517ef2d06748337fcedda20c68ed554ac7d92f6152a3b78c5c4623fae"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 428,
+        "completion_tokens": 63,
+        "total_tokens": 491
+      },
+      "elapsed_seconds": 0.735
+    },
+    {
+      "call_id": "e38df034-3d57-49fd-9b09-647a80fabad3",
+      "time_utc": "2026-10-07T05:31:38.218546+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "b3b931eee3778f2a1e642bb38936a490f63f1f4bc3400405348c8a8b31d9dd33",
+      "phase": "answer",
+      "chunk_ids": [
+        "c2043a5fc662d944fe5363fde8089fcf599da4aeaa4554cdf894b1734976aa80",
+        "5fb92322679a85a202ee292eb93b18bbefb1079bf38989d416580b696ecd6931",
+        "a6379af5d80eeb661d455d6a178565773c6b578c060111f443cc2db2266dacc3"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 984,
+        "completion_tokens": 119,
+        "total_tokens": 1103
+      },
+      "elapsed_seconds": 1.213
+    },
+    {
+      "call_id": "42c127d1-d7b9-4467-bff8-7e0f9c5699bc",
+      "time_utc": "2026-10-07T05:31:39.438088+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "b3b931eee3778f2a1e642bb38936a490f63f1f4bc3400405348c8a8b31d9dd33",
+      "phase": "answer",
+      "chunk_ids": [
+        "c2043a5fc662d944fe5363fde8089fcf599da4aeaa4554cdf894b1734976aa80",
+        "5fb92322679a85a202ee292eb93b18bbefb1079bf38989d416580b696ecd6931",
+        "a6379af5d80eeb661d455d6a178565773c6b578c060111f443cc2db2266dacc3"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 997,
+        "completion_tokens": 10,
+        "total_tokens": 1007
+      },
+      "elapsed_seconds": 0.665
+    },
+    {
+      "call_id": "c2e2bb65-4e64-4757-9a62-74955e53a0af",
+      "time_utc": "2026-10-07T05:31:40.105753+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "381006aedaa2e09dc11677c4462d8ca3aa9b79ec0c9b80d8541552fe0fc5b0b0",
+      "phase": "answer",
+      "chunk_ids": [
+        "2899a05624432e00352c2fa3ea05a0cacb87631ee5e54489a56927d2cbecc40f"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 400,
+        "completion_tokens": 44,
+        "total_tokens": 444
+      },
+      "elapsed_seconds": 0.66
+    },
+    {
+      "call_id": "9c62ff24-2410-423f-94ec-5310523ec999",
+      "time_utc": "2026-10-07T05:31:40.766904+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "511a6bd7eb190c157d065c7c658af7c9bf2b0c76ba604ef02b27d4da9b5cf298",
+      "phase": "answer",
+      "chunk_ids": [
+        "7d16e7fba9eca1bb6f9c001df2bd4c9f4de8ca291cacb7a7bd9b403428768c17"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 468,
+        "completion_tokens": 10,
+        "total_tokens": 478
+      },
+      "elapsed_seconds": 0.402
+    },
+    {
+      "call_id": "a1f4af88-4214-4686-ae67-78bfc00d1b76",
+      "time_utc": "2026-10-07T05:31:41.172201+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "c9ccb65689bd565a498ebb12d105dd4ae6b40c4b05aaa130c34458850aadc37c",
+      "phase": "answer",
+      "chunk_ids": [
+        "f74effe517ef2d06748337fcedda20c68ed554ac7d92f6152a3b78c5c4623fae"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 424,
+        "completion_tokens": 10,
+        "total_tokens": 434
+      },
+      "elapsed_seconds": 0.88
+    },
+    {
+      "call_id": "0c18375f-04a3-4fb0-9468-d97b39dca94a",
+      "time_utc": "2026-10-07T05:31:42.055379+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "b31a8b1b14e433384dc14766bd1265352d0e5722f8e7130a881a9ce3205ba696",
+      "phase": "answer",
+      "chunk_ids": [
+        "a63031630954555e6ca8ad9521c1aeb1e122db1cd11bb7968b2693db3ff530de"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 356,
+        "completion_tokens": 10,
+        "total_tokens": 366
+      },
+      "elapsed_seconds": 0.786
+    },
+    {
+      "call_id": "6fa674f8-e371-43e3-995f-732dca8a49d9",
+      "time_utc": "2026-10-07T05:31:42.848445+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "b3b931eee3778f2a1e642bb38936a490f63f1f4bc3400405348c8a8b31d9dd33",
+      "phase": "answer",
+      "chunk_ids": [
+        "e14ded9da94608850757aee3141fa22cb20cc187a0cd7eb2abe8f863a0084f3d",
+        "c2043a5fc662d944fe5363fde8089fcf599da4aeaa4554cdf894b1734976aa80",
+        "5fb92322679a85a202ee292eb93b18bbefb1079bf38989d416580b696ecd6931"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 1000,
+        "completion_tokens": 10,
+        "total_tokens": 1010
+      },
+      "elapsed_seconds": 0.808
+    },
+    {
+      "call_id": "e2bb24c0-966d-4e88-8241-0b8d0269049d",
+      "time_utc": "2026-10-07T05:31:43.659232+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "0f0d9a40feb2dd57703362f7902a1b13c6c29d3e6c50c099b366263d9a6e0a58",
+      "phase": "answer",
+      "chunk_ids": [
+        "ec60c36af7bec48923aa3c22198506d391c4a7bff6e6383a140fb168dbc51b11"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 424,
+        "completion_tokens": 10,
+        "total_tokens": 434
+      },
+      "elapsed_seconds": 0.823
+    },
+    {
+      "call_id": "562da936-56c7-4dbb-a1b6-a004fd90dcd0",
+      "time_utc": "2026-10-07T05:31:44.485142+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "511a6bd7eb190c157d065c7c658af7c9bf2b0c76ba604ef02b27d4da9b5cf298",
+      "phase": "answer",
+      "chunk_ids": [
+        "7d16e7fba9eca1bb6f9c001df2bd4c9f4de8ca291cacb7a7bd9b403428768c17"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 470,
+        "completion_tokens": 10,
+        "total_tokens": 480
+      },
+      "elapsed_seconds": 0.672
+    },
+    {
+      "call_id": "77fe4c81-9c8a-4cd1-b537-6f3e7bc72208",
+      "time_utc": "2026-10-07T05:31:45.160328+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "0f0d9a40feb2dd57703362f7902a1b13c6c29d3e6c50c099b366263d9a6e0a58",
+      "phase": "answer",
+      "chunk_ids": [
+        "ec60c36af7bec48923aa3c22198506d391c4a7bff6e6383a140fb168dbc51b11"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "usage": {
+        "prompt_tokens": 424,
+        "completion_tokens": 10,
+        "total_tokens": 434
+      },
+      "elapsed_seconds": 0.829
+    }
+  ],
+  "summary": {
+    "criterion_passed": 17,
+    "citation_checks_passed": 12,
+    "citation_checks_failed": 0,
+    "service_error_cases": 0,
+    "call_count": 22,
+    "successful_calls": 22,
+    "median_answer_seconds": 0.82,
+    "usage_reported_calls": 22,
+    "token_reporting_coverage": {
+      "prompt_tokens": 22,
+      "completion_tokens": 22,
+      "total_tokens": 22
+    },
+    "reported_tokens": {
+      "prompt_tokens": 11024,
+      "completion_tokens": 1119,
+      "total_tokens": 12143
+    }
+  },
+  "statuses": {
+    "answered": 12,
+    "insufficient": 8
+  },
+  "by_category": {
+    "适用条件": {
+      "passed": 1,
+      "total": 1
+    },
+    "例外": {
+      "passed": 1,
+      "total": 1
+    },
+    "否定条件": {
+      "passed": 1,
+      "total": 1
+    },
+    "流程例外": {
+      "passed": 0,
+      "total": 1
+    },
+    "数值边界": {
+      "passed": 1,
+      "total": 1
+    },
+    "跨句规则": {
+      "passed": 1,
+      "total": 1
+    },
+    "条件遗漏": {
+      "passed": 1,
+      "total": 1
+    },
+    "概念区分": {
+      "passed": 1,
+      "total": 1
+    },
+    "服务时段": {
+      "passed": 1,
+      "total": 1
+    },
+    "多轮追问": {
+      "passed": 1,
+      "total": 1
+    },
+    "长文定位": {
+      "passed": 1,
+      "total": 1
+    },
+    "长文跨段": {
+      "passed": 0,
+      "total": 1
+    },
+    "干扰指令": {
+      "passed": 1,
+      "total": 1
+    },
+    "资料缺失": {
+      "passed": 3,
+      "total": 3
+    },
+    "资料冲突": {
+      "passed": 1,
+      "total": 1
+    },
+    "未定义数字": {
+      "passed": 1,
+      "total": 1
+    },
+    "不可承诺": {
+      "passed": 0,
+      "total": 1
+    },
+    "个人条件缺失": {
+      "passed": 1,
+      "total": 1
+    }
+  }
+}

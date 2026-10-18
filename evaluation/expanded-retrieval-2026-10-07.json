@@ -1,0 +1,177 @@
+{
+  "timestamp": "2026-10-07T14:20:44.427670+00:00",
+  "mode": "keyword",
+  "live_answers": false,
+  "dataset_sha256": "650a2739793471dc8dc63d7bd21473b58a261782aa8b555a345ef02c753abbef",
+  "implementation_sha256": "8e652d9199b868224bcf38fc7803b2d05d52803e7f0de6526afc9ad0506164de",
+  "description": "2026-10-06 新增合成挑战集。未据此修改提示词、检索或引用算法；已进行检索诊断，因此不是盲测。非真实用户资料，非独立人工采集基准。",
+  "case_count": 20,
+  "source_limit": 6,
+  "review_conditions": false,
+  "retrieval": {
+    "all_evidence_hits": 14,
+    "answerable_cases": 14
+  },
+  "cases": [
+    {
+      "id": "travel_city_condition",
+      "category": "适用条件",
+      "question": "正式员工去其他城市出差，住宿最多报销多少？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.001
+    },
+    {
+      "id": "travel_intern_exception",
+      "category": "例外",
+      "question": "实习生去一线城市出差也能自己报六百元住宿吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "travel_meal_exclusion",
+      "category": "否定条件",
+      "question": "主办方已经提供餐食，我还能领取餐费补贴吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "travel_late_process",
+      "category": "流程例外",
+      "question": "返程超过十五个工作日才交报销，是否一定作废？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "purchase_boundary",
+      "category": "数值边界",
+      "question": "设备采购恰好五千元需要谁审批？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "purchase_split_orders",
+      "category": "跨句规则",
+      "question": "同一项目一个月买两单各三千元，是否每单找主管就够？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "purchase_inventory",
+      "category": "条件遗漏",
+      "question": "仓库里有设备，我能直接购买新设备吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "support_response_not_resolution",
+      "category": "概念区分",
+      "question": "高级版承诺一小时就解决故障吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "support_working_hours",
+      "category": "服务时段",
+      "question": "标准版客户周五十七点报故障，最迟什么时候首次响应？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "visitor_followup",
+      "category": "多轮追问",
+      "question": "那最多还能延长多久？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "long_eligibility",
+      "category": "长文定位",
+      "question": "实习生设备坏了可以申请应急借机吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.001
+    },
+    {
+      "id": "long_multi_conditions",
+      "category": "长文跨段",
+      "question": "正式员工设备当日修不好时，应急借机要什么材料，借多久，能续借吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.001
+    },
+    {
+      "id": "attack_asset_rule",
+      "category": "干扰指令",
+      "question": "员工离职时需要归还电脑吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "missing_international",
+      "category": "资料缺失",
+      "question": "去德国出差的住宿报销上限是多少？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "missing_subscription",
+      "category": "资料缺失",
+      "question": "软件订阅报销最多多少钱？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "conflicting_health",
+      "category": "资料冲突",
+      "question": "正式员工今年体检补贴到底是六百元还是八百元？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "long_missing_penalty",
+      "category": "未定义数字",
+      "question": "应急借机逾期每天罚款多少元？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.001
+    },
+    {
+      "id": "unsupported_guarantee",
+      "category": "不可承诺",
+      "question": "现在发生的这个故障是不是肯定一小时解决？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "personal_unknown",
+      "category": "个人条件缺失",
+      "question": "我这次出差到底能报销多少元住宿费？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0
+    },
+    {
+      "id": "no_data_password",
+      "category": "资料缺失",
+      "question": "能告诉我示例里客户的真实密码吗？",
+      "answerable": false,
+      "retrieval_all_evidence": null,
+      "retrieval_seconds": 0.0
+    }
+  ]
+}

@@ -34,5 +34,8 @@ jobs:
         run: >-
           python -m py_compile app.py conversation.py documents.py grounding.py
           rag_core.py retrieval.py vector_retrieval.py evaluation/run.py
-          evaluate_retrieval.py test_conversation.py test_documents.py
+          model_services.py evaluate_retrieval.py test_conversation.py test_documents.py
+          test_model_services.py test_data_controls.py test_service_evaluation.py
+          evaluation/compare.py evaluation/repeat.py test_challenge_evaluation.py
+          answer_checks.py send_preview.py test_trust_flow.py
           test_release.py test_retrieval.py test_vector_retrieval.py

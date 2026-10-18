@@ -12,7 +12,8 @@ class ReleaseTests(unittest.TestCase):
     def test_empty_or_truncated_service_response_is_error(self):
         import rag_core
         for content, reason, message in [("", "stop", "有效正文"), ("{}", "length", "截断")]:
-            with self.subTest(reason=reason), patch.object(rag_core, "API_KEY", "test"), patch.object(rag_core, "BASE_URL", "https://example.invalid"), patch.object(rag_core.requests, "post") as post:
+            with self.subTest(reason=reason), patch.dict("os.environ", {"TENCENT_API_KEY": "test"}), patch.object(rag_core, "API_KEY", "test"), patch.object(rag_core, "BASE_URL", "https://example.invalid"), patch.object(rag_core.requests, "post") as post:
+                post.return_value.status_code = 200
                 post.return_value.json.return_value = {"choices": [{"message": {"content": content}, "finish_reason": reason}]}
                 with self.assertRaisesRegex(RuntimeError, message):
                     rag_core.call_llm("测试")

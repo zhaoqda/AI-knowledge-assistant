@@ -12,3 +12,6 @@ __pycache__/
 chroma/
 .streamlit/secrets.toml
 .model_cache/
+
+# Deployment-specific service registry (may include internal endpoint names)
+model_services.json

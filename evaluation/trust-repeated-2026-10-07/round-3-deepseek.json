@@ -1,0 +1,407 @@
+{
+  "timestamp": "2026-10-07T14:15:23.526561+00:00",
+  "mode": "keyword",
+  "live_answers": true,
+  "dataset_sha256": "c63304afc718e9725d1f2d0ce1aa3f7287c8b70628c00c037832453432094597",
+  "implementation_sha256": "bac1a1b70368acd27256638246d924ef68e332000be3854f9e68dcb7829dbfcc",
+  "description": "信任流程开发回归集：复用已知条件遗漏、过度拒答及长文跨段问题。用于新流程三轮重复，不是盲测、不是新用户样本。",
+  "case_count": 4,
+  "source_limit": 6,
+  "review_conditions": true,
+  "retrieval": {
+    "all_evidence_hits": 4,
+    "answerable_cases": 4
+  },
+  "cases": [
+    {
+      "id": "late_approval",
+      "category": "条件完整性",
+      "question": "出差超过十个工作日才报销，会直接作废吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "reason_code": "",
+      "review_status": "passed",
+      "review_notes": [],
+      "call_ids": [
+        "42c35c72-d47c-4133-b492-fab43851bae7",
+        "a8ecd873-4ae7-4425-8f04-01feb53c4aae"
+      ],
+      "call_count": 2,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "不会直接作废；超过期限不自动作废。 [来源1]\n\n但超期后须先向财务主管说明原因，并获得补交批准。 [来源1]",
+      "resolved_question": "出差超过十个工作日才报销，会直接作废吗？",
+      "criterion_pass": true,
+      "answer_seconds": 2.482
+    },
+    {
+      "id": "guest_approval_followup",
+      "category": "条件完整性",
+      "question": "那最多延长多久？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "reason_code": "conditions_flagged",
+      "review_status": "flagged",
+      "review_notes": [
+        "access.txt · 第 1 段：回答只说明了延期时长，遗漏了同一延期操作必须经安全管理员批准这一影响用户行动的条件。\n原文：接待人可申请延期一次，最长两天，必须经安全管理员批准。"
+      ],
+      "call_ids": [
+        "9e51b8a9-88d3-4a45-9112-7f4e902e04ac",
+        "978d5561-02a4-4157-a984-01b15fde028c",
+        "205601f2-646e-4555-901a-d0bfcbe66c51",
+        "9fdf2e24-e501-4e1d-ba96-b18f5460ec15",
+        "b35d4992-5ead-4f27-ae6c-48a1041edc50"
+      ],
+      "call_count": 5,
+      "citation_check": "failed",
+      "cited_source_count": 0,
+      "status": "unverified",
+      "answer": "条件核对发现可能遗漏或矛盾，暂不展示为可靠答案。",
+      "resolved_question": "访客账号最多可以延长多久？",
+      "criterion_pass": false,
+      "answer_seconds": 5.481
+    },
+    {
+      "id": "no_resolution_promise",
+      "category": "条件完整性",
+      "question": "专业版是不是保证两小时解决故障？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.0,
+      "reason_code": "",
+      "review_status": "passed",
+      "review_notes": [],
+      "call_ids": [
+        "51e4fcb6-c22c-4225-869a-7b50a1ceddc1",
+        "55325961-2e0c-4a68-b229-dcfc89d5cf05"
+      ],
+      "call_count": 2,
+      "citation_check": "passed",
+      "cited_source_count": 1,
+      "status": "answered",
+      "answer": "不是，专业版只保证首次响应为两小时，不代表问题已解决。 [来源1]\n\n解决时间取决于故障原因，原文不承诺统一解决时限。 [来源1]",
+      "resolved_question": "专业版是不是保证两小时解决故障？",
+      "criterion_pass": true,
+      "answer_seconds": 2.403
+    },
+    {
+      "id": "long_multi_conditions",
+      "category": "长文跨段",
+      "question": "正式员工设备当日修不好时，应急借机要什么材料，借多久，能续借吗？",
+      "answerable": true,
+      "retrieval_all_evidence": true,
+      "retrieval_seconds": 0.002,
+      "reason_code": "",
+      "review_status": "passed",
+      "review_notes": [],
+      "call_ids": [
+        "ec851116-8092-4eb2-b257-6a3935e7b4e3",
+        "3ce97b02-826b-49d7-be61-fddf8a65b39d"
+      ],
+      "call_count": 2,
+      "citation_check": "passed",
+      "cited_source_count": 3,
+      "status": "answered",
+      "answer": "只有正式员工在设备故障且无法当日修复时才能申请应急借机；外包人员和实习生不适用。 [来源1]\n\n申请须同时附维修工单和直属主管确认，资产管理员审核后发放。 [来源2]\n\n能当日修好的设备不提供应急借机。 [来源2]\n\n应急借机最长五个工作日。 [来源3]\n\n到期仍需使用时，应在到期前一天续借；续借仅允许一次，最长两个工作日。 [来源3]\n\n逾期未还会暂停新的借机申请，但本文件没有规定罚款金额。 [来源3]",
+      "resolved_question": "正式员工设备当日修不好时，应急借机要什么材料，借多久，能续借吗？",
+      "criterion_pass": true,
+      "answer_seconds": 2.595
+    }
+  ],
+  "service": {
+    "id": "deepseek",
+    "provider": "DeepSeek 官方 API",
+    "model": "deepseek-flash",
+    "endpoint": "https://api.deepseek.com",
+    "config_fingerprint": "e251dad776832b0ca9cd12514fe4315a1b8f22256a7f4b128a1b25670ac24a1b"
+  },
+  "calls": [
+    {
+      "call_id": "42c35c72-d47c-4133-b492-fab43851bae7",
+      "time_utc": "2026-10-07T14:15:10.562656+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "936f554fbdec8a63f98629d3c570e66d2d97d51ae6c3d04361e75ddb435b82b8",
+      "phase": "answer",
+      "chunk_ids": [
+        "46b0806c57ba776d614aa5c10e556a25619536f6a3ccdd305e8647bd617b247a"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 612,
+        "completion_tokens": 101,
+        "total_tokens": 713
+      },
+      "elapsed_seconds": 1.361
+    },
+    {
+      "call_id": "a8ecd873-4ae7-4425-8f04-01feb53c4aae",
+      "time_utc": "2026-10-07T14:15:11.925819+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "936f554fbdec8a63f98629d3c570e66d2d97d51ae6c3d04361e75ddb435b82b8",
+      "phase": "review",
+      "chunk_ids": [
+        "46b0806c57ba776d614aa5c10e556a25619536f6a3ccdd305e8647bd617b247a"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 350,
+        "completion_tokens": 9,
+        "total_tokens": 359
+      },
+      "elapsed_seconds": 1.117
+    },
+    {
+      "call_id": "9e51b8a9-88d3-4a45-9112-7f4e902e04ac",
+      "time_utc": "2026-10-07T14:15:13.045169+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "2388d13ced1fb029ab6cc167ebf8665c64e8994cf805d940942026de0819349e",
+      "phase": "answer",
+      "chunk_ids": [
+        "38b581ca6bc677c64e6536285bbbcab529846233168b670e84b7ffb74e749d7f"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 570,
+        "completion_tokens": 35,
+        "total_tokens": 605
+      },
+      "elapsed_seconds": 0.971
+    },
+    {
+      "call_id": "978d5561-02a4-4157-a984-01b15fde028c",
+      "time_utc": "2026-10-07T14:15:14.017892+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "2388d13ced1fb029ab6cc167ebf8665c64e8994cf805d940942026de0819349e",
+      "phase": "review",
+      "chunk_ids": [
+        "38b581ca6bc677c64e6536285bbbcab529846233168b670e84b7ffb74e749d7f"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 277,
+        "completion_tokens": 9,
+        "total_tokens": 286
+      },
+      "elapsed_seconds": 1.297
+    },
+    {
+      "call_id": "205601f2-646e-4555-901a-d0bfcbe66c51",
+      "time_utc": "2026-10-07T14:15:15.316169+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "2388d13ced1fb029ab6cc167ebf8665c64e8994cf805d940942026de0819349e",
+      "phase": "rewrite",
+      "chunk_ids": [],
+      "history_text_included": true,
+      "status": "success",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 186,
+        "completion_tokens": 12,
+        "total_tokens": 198
+      },
+      "elapsed_seconds": 1.006
+    },
+    {
+      "call_id": "9fdf2e24-e501-4e1d-ba96-b18f5460ec15",
+      "time_utc": "2026-10-07T14:15:16.324107+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "2388d13ced1fb029ab6cc167ebf8665c64e8994cf805d940942026de0819349e",
+      "phase": "answer",
+      "chunk_ids": [
+        "38b581ca6bc677c64e6536285bbbcab529846233168b670e84b7ffb74e749d7f"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 571,
+        "completion_tokens": 54,
+        "total_tokens": 625
+      },
+      "elapsed_seconds": 1.287
+    },
+    {
+      "call_id": "b35d4992-5ead-4f27-ae6c-48a1041edc50",
+      "time_utc": "2026-10-07T14:15:17.612708+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "2388d13ced1fb029ab6cc167ebf8665c64e8994cf805d940942026de0819349e",
+      "phase": "review",
+      "chunk_ids": [
+        "38b581ca6bc677c64e6536285bbbcab529846233168b670e84b7ffb74e749d7f"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 281,
+        "completion_tokens": 58,
+        "total_tokens": 339
+      },
+      "elapsed_seconds": 0.913
+    },
+    {
+      "call_id": "51e4fcb6-c22c-4225-869a-7b50a1ceddc1",
+      "time_utc": "2026-10-07T14:15:18.526376+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "06d16bf850317b07afe08d5979bca5d4767379e0c2e3aa31ee04ba9f25e99b31",
+      "phase": "answer",
+      "chunk_ids": [
+        "6cb1e2794e019855dc5a3ce499e3001a23b3685fa36c127d12d62b1193557461"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 586,
+        "completion_tokens": 92,
+        "total_tokens": 678
+      },
+      "elapsed_seconds": 1.356
+    },
+    {
+      "call_id": "55325961-2e0c-4a68-b229-dcfc89d5cf05",
+      "time_utc": "2026-10-07T14:15:19.884224+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "06d16bf850317b07afe08d5979bca5d4767379e0c2e3aa31ee04ba9f25e99b31",
+      "phase": "review",
+      "chunk_ids": [
+        "6cb1e2794e019855dc5a3ce499e3001a23b3685fa36c127d12d62b1193557461"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 322,
+        "completion_tokens": 9,
+        "total_tokens": 331
+      },
+      "elapsed_seconds": 1.043
+    },
+    {
+      "call_id": "ec851116-8092-4eb2-b257-6a3935e7b4e3",
+      "time_utc": "2026-10-07T14:15:20.933048+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "b3b931eee3778f2a1e642bb38936a490f63f1f4bc3400405348c8a8b31d9dd33",
+      "phase": "answer",
+      "chunk_ids": [
+        "c2043a5fc662d944fe5363fde8089fcf599da4aeaa4554cdf894b1734976aa80",
+        "5fb92322679a85a202ee292eb93b18bbefb1079bf38989d416580b696ecd6931",
+        "a6379af5d80eeb661d455d6a178565773c6b578c060111f443cc2db2266dacc3",
+        "e14ded9da94608850757aee3141fa22cb20cc187a0cd7eb2abe8f863a0084f3d",
+        "c3e8d9d259951a2b1b29786d34276a45db7804af26973782023a90f433a5e7af",
+        "188ebc56e0f40e9bf59c63dca581abcd38a4c0531cae7f6be932db09c35e183d"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 1927,
+        "completion_tokens": 273,
+        "total_tokens": 2200
+      },
+      "elapsed_seconds": 1.699
+    },
+    {
+      "call_id": "3ce97b02-826b-49d7-be61-fddf8a65b39d",
+      "time_utc": "2026-10-07T14:15:22.634297+00:00",
+      "service_id": "deepseek",
+      "provider": "DeepSeek 官方 API",
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com",
+      "document_id": "b3b931eee3778f2a1e642bb38936a490f63f1f4bc3400405348c8a8b31d9dd33",
+      "phase": "review",
+      "chunk_ids": [
+        "c2043a5fc662d944fe5363fde8089fcf599da4aeaa4554cdf894b1734976aa80",
+        "5fb92322679a85a202ee292eb93b18bbefb1079bf38989d416580b696ecd6931",
+        "a6379af5d80eeb661d455d6a178565773c6b578c060111f443cc2db2266dacc3",
+        "e14ded9da94608850757aee3141fa22cb20cc187a0cd7eb2abe8f863a0084f3d",
+        "c3e8d9d259951a2b1b29786d34276a45db7804af26973782023a90f433a5e7af",
+        "188ebc56e0f40e9bf59c63dca581abcd38a4c0531cae7f6be932db09c35e183d"
+      ],
+      "history_text_included": false,
+      "status": "success",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 1843,
+        "completion_tokens": 9,
+        "total_tokens": 1852
+      },
+      "elapsed_seconds": 0.89
+    }
+  ],
+  "summary": {
+    "criterion_passed": 3,
+    "citation_checks_passed": 3,
+    "citation_checks_failed": 1,
+    "service_error_cases": 0,
+    "call_count": 11,
+    "successful_calls": 11,
+    "median_answer_seconds": 2.538,
+    "usage_reported_calls": 11,
+    "token_reporting_coverage": {
+      "prompt_tokens": 11,
+      "completion_tokens": 11,
+      "total_tokens": 11
+    },
+    "reported_tokens": {
+      "prompt_tokens": 7525,
+      "completion_tokens": 661,
+      "total_tokens": 8186
+    }
+  },
+  "statuses": {
+    "answered": 3,
+    "unverified": 1
+  },
+  "by_category": {
+    "条件完整性": {
+      "passed": 2,
+      "total": 3
+    },
+    "长文跨段": {
+      "passed": 1,
+      "total": 1
+    }
+  }
+}
